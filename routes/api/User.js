@@ -7,5 +7,10 @@ router
   .get(userController.findAll)
   .post(userController.create);
 
+  router
+  .route("/:id")
+  .get(userController.findById)
+  .delete(userController.remove);
+
 
 module.exports = router;

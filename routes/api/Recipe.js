@@ -5,7 +5,12 @@ const recipeController = require("../../controllers/recipeController");
 router
   .route("/")
   .get(recipeController.findAll)
-  .post(recipeController.create);
+  .post(recipeController.save);
+
+  router
+  .route("/:id")
+  .get(recipeController.findById)
+  .delete(recipeController.remove);
 
 
 module.exports = router;
