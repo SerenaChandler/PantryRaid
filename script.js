@@ -1,22 +1,23 @@
-var options = [];
+var expanded = false;
 
-document.querySelector(".dropdown-menu a").on( 'click', function( event ) {
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
 
-   var $target = $( event.currentTarget ),
-       val = $target.attr( 'data-value' ),
-       $inp = $target.find( 'input' ),
-       idx;
-
-   if ( ( idx = options.indexOf( val ) ) > -1 ) {
-      options.splice( idx, 1 );
-      setTimeout( function() { $inp.prop( 'checked', false ) }, 0);
-   } else {
-      options.push( val );
-      setTimeout( function() { $inp.prop( 'checked', true ) }, 0);
-   }
-
-   $( event.target ).blur();
-      
-   console.log( options );
-   return false;
-});
+function showCheckboxes2() {
+  var checkboxes2 = document.getElementById("checkboxes2");
+  if (!expanded) {
+    checkboxes2.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes2.style.display = "none";
+    expanded = false;
+  }
+}
