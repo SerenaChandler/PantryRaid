@@ -22,6 +22,12 @@ Recipe.init(
     instructions: {
       type: DataTypes.STRING,
     },
+    description: {
+      type: DataTypes.STRING
+    },
+    link: {
+      type: DataTypes.STRING
+    },
 
     user_id: {
       type: DataTypes.INTEGER,
