@@ -1,21 +1,16 @@
 import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
 
-
-const Recipes = () => {
+const Ingredients = () => {
   return (
     <div>
-      {Recipe.map((recipe) => (
-        <ListGroup>
-          <ListGroup.Item>Cras justo odio</ListGroup.Item>
-          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-          <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-          <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-        </ListGroup>
-      ))}
+      <ListGroup>
+        {Ingredient.map((ingredient) => (
+          <ListGroup.Item>{ingredient.name}</ListGroup.Item>
+        ))}
+      </ListGroup>
     </div>
   );
 };
 
-export default Recipes;
+export default Ingredients;
