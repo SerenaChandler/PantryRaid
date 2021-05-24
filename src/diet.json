@@ -1,0 +1,26 @@
+[
+    {
+        "name":"Balanced",
+        "param":"balanced"
+    },
+    {
+        "name":"High-Fiber",
+        "param":"high-fiber"
+    },
+    {
+        "name":"High-Protein",
+        "param":"high-protein"
+    },
+    {
+        "name":"Low-Carb",
+        "param":"low-card"
+    },
+    {
+        "name":"Low-Fat",
+        "param":"low-fat"
+    },
+    {
+        "name":"Low-Sodium",
+        "param":"low-sodium"
+    }
+]
