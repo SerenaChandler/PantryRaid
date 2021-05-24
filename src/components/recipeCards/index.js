@@ -13,7 +13,7 @@ const Recipes = () => {
   <Card.Body>
     <Card.Title>{recipe.name}</Card.Title>
     <Card.Text>
-     {recipe.}
+     {recipe.description}
     </Card.Text>
     <Button variant="primary">{recipe.link}</Button>
   </Card.Body>
