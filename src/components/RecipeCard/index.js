@@ -31,16 +31,15 @@ const RecipeCard = () => {
                             <div class="col-3 text-center">
                                 <h1>Ingredients</h1>
                                 <ul style={{"list-style": "none"}}>
-                                  <li>{recipe.ingredients}</li>
-                                    
-                                    
+                                  {recipe.ingredients.map((ingredient) => <li>{ingredient}</li>)}  
                                 </ul>
                             </div>
 
                             <div class="col-3 text-center">
                                 <h1>Nutritional info</h1>
-                                <p>{recipe.nutrition}</p>
-
+                                <ul style={{"list-style": "none"}}>
+                                {recipe.nutrition.map((nutrition) => <li>{nutrition}</li>)}
+                                </ul>
                             </div>
                         </div>
 
