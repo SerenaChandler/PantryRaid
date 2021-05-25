@@ -14,6 +14,7 @@ import ChecklistDropdown from "./components/ChecklistDropdown"
 function App() {
     return(
         <Router>
+            <Navbar/>
             <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/cookbook" component={Cookbook}/>
