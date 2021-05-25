@@ -11,15 +11,18 @@ import Navbar from "./components/Navbar"
 // import ChecklistDropdown from "./components/ChecklistDropdown"
 
 function App() {
-    return(
+    return (
         <Router>
-            <Navbar/>
+            <div>
+            <Navbar />
             <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/cookbook" component={Cookbook}/>
-            <Route exact path="/pantry" component={Pantry}/>
-            <Route component={notFound}/>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/home" component={Home} />
+                <Route exact path="/cookbook" component={Cookbook} />
+                <Route exact path="/pantry" component={Pantry} />
+                <Route component={notFound} />
             </Switch>
+            </div>
         </Router>
 
 

@@ -14,18 +14,18 @@ const Home = () => {
         <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-12 min-vh-100">
-                <Hero/>
-                <Searchbar/>
-                {/* <ChecklistDropdown/> */}
-                <RecipeHeader/>
-                <div className="row">
-                    <div className="col-lg-12">
-                <RecipeCard/>
+                    <Hero />
+                    <Searchbar />
+                    {/* <ChecklistDropdown/> */}
+                    <RecipeHeader />
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <RecipeCard />
 
 
-                </div>
-                </div>
-            
+                        </div>
+                    </div>
+
 
 
                 </div>
