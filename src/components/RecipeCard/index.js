@@ -1,10 +1,8 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import Recipes from "../../recipe.json";
 
 const RecipeCard = () => {
-  
+
   return (
     <div>
       {Recipes.map((recipe) => (

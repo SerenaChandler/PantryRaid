@@ -7,7 +7,7 @@ const PantryMyFridge = () => {
 
         <div className="col-lg-6">
             <div className="container d-flex justify-content-center">
-                <div className="card" style="width: 18rem;">
+                <div className="card">
                     <div className="card-header">
                         Ingredients
                                 </div>
