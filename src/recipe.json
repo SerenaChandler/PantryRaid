@@ -3,30 +3,40 @@
     "name": "Pizza",
     "image": "./food.png",
     "link": "https://www.simplyrecipes.com/recipes/homemade_pizza/",
-    "description": "yummy pizza"
+    "description": "yummy pizza",
+    "nutrition": ["1500 calories", "20g protein", "15g sugar"],
+    "ingredients": ["cheese", "bread", "meat"]
   },
   {
     "name": "chicckie nuggets",
     "image": "./food.png",
     "link": "https://www.simplyrecipes.com/recipes/homemade_pizza/",
-    "description": "they are called chicken nuggets grow up"
+    "description": "they are called chicken nuggets grow up",
+    "nutrition": ["1500 calories", "20g protein", "15g sugar"],
+    "ingredients": ["cheese", "bread", "meat"]
   },
   {
     "name": "sushi",
     "image": "./food.png",
     "link": "https://www.simplyrecipes.com/recipes/homemade_pizza/",
-    "description": "rice and fish."
+    "description": "rice and fish.",
+    "nutrition": ["1500 calories", "20g protein", "15g sugar"],
+    "ingredients": ["cheese", "bread", "meat"]
   },
   {
     "name": "salad",
     "image": "./food.png",
     "link": "https://www.crunchycreamysweet.com/fish-sticks/",
-    "description": "fresh af ngl."
+    "description": "fresh af ngl.",
+    "nutrition": ["1500 calories", "20g protein", "15g sugar"],
+    "ingredients": ["cheese", "bread", "meat"]
   },
   {
     "name": "fish sticks",
     "image": "./food.png",
     "link": "https://www.crunchycreamysweet.com/fish-sticks/",
-    "description": "um, check please!"
+    "description": "um, check please!",
+    "nutrition": ["1500 calories", "20g protein", "15g sugar"],
+    "ingredients": ["cheese", "bread", "meat"]
   }
 ]
