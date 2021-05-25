@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Pizza",
+    "image": "./food.png",
+    "link": "https://www.simplyrecipes.com/recipes/homemade_pizza/",
+    "description": "yummy pizza"
+  },
+  {
+    "name": "chicckie nuggets",
+    "image": "./food.png",
+    "link": "https://www.simplyrecipes.com/recipes/homemade_pizza/",
+    "description": "they are called chicken nuggets grow up"
+  },
+  {
+    "name": "sushi",
+    "image": "./food.png",
+    "link": "https://www.simplyrecipes.com/recipes/homemade_pizza/",
+    "description": "rice and fish."
+  },
+  {
+    "name": "salad",
+    "image": "./food.png",
+    "link": "https://www.crunchycreamysweet.com/fish-sticks/",
+    "description": "fresh af ngl."
+  },
+  {
+    "name": "fish sticks",
+    "image": "./food.png",
+    "link": "https://www.crunchycreamysweet.com/fish-sticks/",
+    "description": "um, check please!"
+  }
+]
