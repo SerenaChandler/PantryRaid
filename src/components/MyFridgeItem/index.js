@@ -8,7 +8,7 @@ const MyFridgeItem = () => {
 
         <div className="row my-3">
         <div className="col">
-            <p className="ms-3">Mapped item here</p>
+            <p className="ms-3 text-light">Mapped item here</p>
         </div>
         <div className="col d-flex justify-content-end align-items-center mx-4">
             <button className="btn btn-outline-primary">+</button>

@@ -18,8 +18,9 @@ const Login = () => {
                   <div className="login-form">
                      <form>
                         <div className="form-group">
-                           <label>User Name</label>
+                           <label className="text-light">User Name</label>
                            <input type="text" className="form-control" placeholder="User Name" />
+
                         </div>
                         <div className="form-group">
                            <label>Password</label>

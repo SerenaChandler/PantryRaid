@@ -58,7 +58,7 @@ const Home = () => {
                  title={recipe.label}
                  image={recipe.image}
                  description={recipe.cuisineType}
-                //  ingredients={recipe.ingredients}
+                 ingredients={recipe.ingredientLines}
                 //  nutrition={recipe.recipe.nutrition}
                  
                  />

@@ -1,0 +1,53 @@
+.recipecard{
+    margin:auto;
+    border-radius: 20px;
+    border: 1px solid white;
+    height: 400px;
+    width: 80%;
+    display: flex;
+    z-index: 1;
+    margin-bottom: 15px;
+    align-items:center;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+}
+
+.recipecard::-webkit-scrollbar{
+    display:none
+}
+
+
+
+.left{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    border-radius: 20px 0px 0px 20px;
+    z-index: -1;
+}
+
+.right{
+    text-align: center;
+    width: 70%;
+    color: white;
+}
+
+
+ul {
+  list-style: none;
+}
+
+.description{
+    font-style: italic;
+}
+.ingredients{
+    text-align: left;
+    justify-content: left;
+    column-count: 2;
+}
