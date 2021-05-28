@@ -6,6 +6,7 @@ import Cookbook from "./pages/Cookbook"
 import Pantry from "./pages/Pantry"
 import notFound from "./pages/notFound"
 import Navbar from "./components/Navbar"
+import Login from './pages/Login/Login'
 // import Searchbar from "./components/Searchbar"
 // import RecipeHeader from "./components/RecipeHeader"
 // import ChecklistDropdown from "./components/ChecklistDropdown"
@@ -16,11 +17,11 @@ function App() {
             <div>
             <Navbar />
             <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/home" component={Home} />
-                <Route exact path="/cookbook" component={Cookbook} />
-                <Route exact path="/pantry" component={Pantry} />
-                <Route component={notFound} />
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/cookbook" component={Cookbook}/>
+            <Route exact path="/pantry" component={Pantry}/>
+            <Route exact path="/login" component={Login}/>
+            <Route component={notFound}/>
             </Switch>
             </div>
         </Router>
