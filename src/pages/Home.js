@@ -25,7 +25,7 @@ const Home = () => {
     const getRecipes = (search) => {
         API.getRecipesTest(search)
         .then((results) => {
-            setReturnedRecipes(results);
+            setReturnedRecipes(results.data.hits);
             console.log(results)
         })
         .catch((err) => console.log(err))
@@ -49,7 +49,19 @@ const Home = () => {
                 <RecipeHeader/>
                 <div className="row">
                     <div className="col-lg-12">
-                <RecipeCard/>
+
+                    {returnedRecipes.map(({recipe}) => (
+                <RecipeCard
+                //  id={recipe.id}
+                //  key={recipe.id}
+                 title={recipe.label}
+                 image={recipe.image}
+                 description={recipe.cuisineType}
+                //  ingredients={recipe.ingredients}
+                //  nutrition={recipe.recipe.nutrition}
+                 
+                 />
+                    ))}
 
 
                 </div>
