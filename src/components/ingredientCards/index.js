@@ -2,8 +2,7 @@ import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
 
 const Ingredients = (props) => {
-
-  const {label, image, nutrition} = props
+  const { label, image, nutrition } = props;
 
   return (
     // <div>
@@ -15,36 +14,26 @@ const Ingredients = (props) => {
     // </div>
 
     <div className="row mt-4">
-    <div className="col-3 text-center">
+      <div className="col-3 text-center">
         <h1 className="text-light">{label}</h1>
-        <img src={image} alt="" width="250" height="250"/>
-    </div>
+        <img src={image} alt="" width="250" height="250" />
+      </div>
 
-    <div className="col-3 text-center">
+      <div className="col-3 text-center">
         <h1 className="text-light">Description</h1>
         <p className="text-light"></p>
-    </div>
+      </div>
 
-    <div className="col-3 text-center">
+      <div className="col-3 text-center">
         <h1 className="text-light">Ingredients</h1>
-        <ul style={{"list-style": "none"}}>
+        <ul style={{ "list-style": "none" }}></ul>
+      </div>
 
-        
-
-            
-          
-        </ul>
-    </div>
-
-    <div className="col-3 text-center">
+      <div className="col-3 text-center">
         <h1 className="text-light">Nutritional info</h1>
         <p className="text-light"></p>
-
+      </div>
     </div>
-</div>
-
-
-
   );
 };
 
