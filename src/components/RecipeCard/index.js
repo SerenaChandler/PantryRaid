@@ -8,6 +8,7 @@ const RecipeCard = (props) => {
     <div>
 <div className="recipecard">
 <div className="left" style={{ backgroundImage: `url("${image}")`}}>&nbsp;</div>
+<button onClick={props.saveFood} className="saveBtn">+</button>
 <div className="right"><h3>{title}</h3>
 <p className="description">{description}</p>
 <div className="ingredients">

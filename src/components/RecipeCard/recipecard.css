@@ -14,6 +14,11 @@
 
 }
 
+.saveBtn{
+    top: 0;
+    right: 0;
+}
+
 .recipecard::-webkit-scrollbar{
     display:none
 }
