@@ -6,6 +6,7 @@ import Cookbook from "./pages/Cookbook"
 import Pantry from "./pages/Pantry"
 import notFound from "./pages/notFound"
 import Navbar from "./components/Navbar"
+import Login from './pages/Login/Login'
 // import Searchbar from "./components/Searchbar"
 // import RecipeHeader from "./components/RecipeHeader"
 // import ChecklistDropdown from "./components/ChecklistDropdown"
@@ -18,6 +19,7 @@ function App() {
             <Route exact path="/" component={Home}/>
             <Route exact path="/cookbook" component={Cookbook}/>
             <Route exact path="/pantry" component={Pantry}/>
+            <Route exact path="/login" component={Login}/>
             <Route component={notFound}/>
             </Switch>
         </Router>
