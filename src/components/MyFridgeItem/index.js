@@ -5,6 +5,7 @@ const MyFridgeItem = () => {
     // function for only mapping over items we've added to the user
     return (
                 // MAP OVER AND GET EACH ITEM NAME
+
         <div className="row my-3">
         <div className="col">
             <p className="ms-3">Mapped item here</p>

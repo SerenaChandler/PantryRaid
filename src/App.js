@@ -12,9 +12,10 @@ import Login from './pages/Login/Login'
 // import ChecklistDropdown from "./components/ChecklistDropdown"
 
 function App() {
-    return(
+    return (
         <Router>
-            <Navbar/>
+            <div>
+            <Navbar />
             <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/cookbook" component={Cookbook}/>
@@ -22,6 +23,7 @@ function App() {
             <Route exact path="/login" component={Login}/>
             <Route component={notFound}/>
             </Switch>
+            </div>
         </Router>
 
 
