@@ -18,6 +18,7 @@ const Cookbook = () => {
                 </div>
             </div>
         </div>
+        </div>
 
 
     );
