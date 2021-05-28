@@ -13,7 +13,8 @@ const Pantry = () => {
                     <div className="row">
                         <div className="d-flex justify-content-center">
                             <CookbookRecipes />
-                        </div>
+                            {/* maybe this needs to be passed a function or prop or something for keeping track of the missing ingredients
+                        </div> */}
                     </div>
                 </div>
             </div>
