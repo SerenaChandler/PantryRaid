@@ -30,9 +30,9 @@ const RecipeCard = () => {
               {recipe.nutrition.map((nutrition) => <li className="text-light">{nutrition}</li>)}
             </ul>
           </div>
-
+          
           <div class="col-2 text-center">
-            <h1>Missing ingredients:</h1>
+            <h1 className="text-light">Missing ingredients:</h1>
             <ul style={{ "list-style": "none" }}>
               {/* this is where the missing ingredients should be */}
               <li className="text-light">Missing ingredient 1</li>

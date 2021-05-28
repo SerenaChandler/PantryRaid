@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const PantryMyFridge = (props) => {
+const IngredientContainer = (props) => {
 
     const { search, handleFormSubmit, handleInputChange } = props;
     return (
@@ -36,4 +36,4 @@ const PantryMyFridge = (props) => {
     );
 };
 
-export default PantryMyFridge;
+export default IngredientContainer;
