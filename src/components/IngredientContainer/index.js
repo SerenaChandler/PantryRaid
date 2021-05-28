@@ -1,19 +1,36 @@
 import React from "react";
 
 
-const PantryMyFridge = () => {
+const PantryMyFridge = (props) => {
+
+    const { search, handleFormSubmit, handleInputChange } = props;
     return (
 
 
         <div className="col-lg-6">
             <div className="container d-flex justify-content-center">
-                <div className="card">
-                    <div className="card-header">
-                        Ingredients
-                                </div>
-
-                                {/* THIS IS WHERE INGREDIENT CARDS WILL NEED TO BE MAPPED OVER */}
+            <form
+                className="form-inline my-2 my-lg-0"
+                onSubmit={handleFormSubmit}
+              >
+                <input
+                  value={search}
+                  name="search"
+                  onChange={handleInputChange}
+                  className="form-control mr-sm-2 "
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <div className="d-flex justify-content-end mt-4">
+                  <button
+                    className="btn btn-outline-success my-2 my-sm-0"
+                    type="submit"
+                  >
+                    Search
+                  </button>
                 </div>
+              </form>
             </div>
         </div>
     );
