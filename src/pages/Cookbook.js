@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
-import PantryMyFridge from "../components/PantryMyFridge";
-import IngredientContainer from "../components/IngredientContainer";
 import CookbookRecipes from "../components/CookbookRecipes"
 // import ChecklistDropdown from "./components/ChecklistDropdown"
 
-const Pantry = () => {
+const Cookbook = () => {
     // functions for handling search and checkboxes
     return (
         <div className="container-fluid">
@@ -13,8 +11,9 @@ const Pantry = () => {
                     <div className="row">
                         <div className="d-flex justify-content-center">
                             <CookbookRecipes />
-                            {/* maybe this needs to be passed a function or prop or something for keeping track of the missing ingredients
-                        </div> */}
+                            {/* maybe this needs to be passed a function or prop or something for keeping track of the missing ingredients */}
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -25,4 +24,4 @@ const Pantry = () => {
     );
 };
 
-export default Pantry;
+export default Cookbook;
