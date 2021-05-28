@@ -19,6 +19,7 @@ const Pantry = () => {
                 </div>
             </div>
         </div>
+        </div>
 
 
     );
