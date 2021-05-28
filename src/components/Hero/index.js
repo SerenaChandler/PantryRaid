@@ -7,7 +7,7 @@ const Hero = () => {
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="hero text-center">
-                            <h1 className="display-5">Pantry Raid</h1>
+                            <h1 className="display-5 text-light">Pantry Raid</h1>
                         </div>
                     </div>
                 </div>

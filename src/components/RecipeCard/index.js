@@ -3,7 +3,7 @@ import "./recipecard.css"
 
 
 const RecipeCard = (props) => {
-  const {title, image, description, ingredients, nutrition} = props
+  const { title, image, description, ingredients, nutrition } = props
   return (
     <div>
 <div className="recipecard">
@@ -20,6 +20,7 @@ const RecipeCard = (props) => {
 
 </div>
 </div>
+
     </div>
   );
 };
