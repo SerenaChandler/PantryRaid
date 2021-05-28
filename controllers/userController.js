@@ -26,7 +26,6 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   loginCred,
-
 };
 
 async function loginCred(req,res){
@@ -52,7 +51,7 @@ async function loginCred(req,res){
         res.json({ user: userData, message: 'You Are Now Logged In!'});
     });
 
-    console.log('hi marko');
+    console.log('Logged In');
 } catch (err) {
     res.status(400).json(err);
 };
