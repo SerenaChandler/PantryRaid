@@ -17,6 +17,7 @@ const RecipeCard = () => {
         //     <Button variant="primary">{recipe.link}</Button>
         //   </Card.Body>
         // </Card>
+        
         <div class="row mt-4">
                             <div class="col-3 text-center">
                                 <h1>{recipe.name}</h1>
@@ -33,7 +34,7 @@ const RecipeCard = () => {
                                 <ul style={{"list-style": "none"}}>
                                   <li>{recipe.ingredients}</li>
                                     
-                                    
+                                  
                                 </ul>
                             </div>
 
