@@ -33,7 +33,7 @@ const RecipeCard = (props) => {
                             <div class="col-3 text-center">
                                 <h1>Ingredients</h1>
                                 <ul style={{"list-style": "none"}}>
-                                  <li>{ingredients}</li>
+                                  {ingredients.map((ingredient) => <li>{ingredient}</li>)}
                                     
                                   
                                 </ul>
