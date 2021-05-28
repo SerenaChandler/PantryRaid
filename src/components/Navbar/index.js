@@ -6,9 +6,9 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg">
             <ul>
                 <a href="/home">LOGO HERE</a>
-                <button className="btn btn-outline-primary mx-4">Pantry</button>
-                <button className="btn btn-outline-primary mx-4">Cookbook</button>
-                <button className="btn btn-outline-primary mx-4">Sign In / Register</button>
+                <button className="btn btn-outline-primary mx-4"><a href="/pantry" alt="pantry button" className="text-decoration-none">Pantry</a></button>
+                <button className="btn btn-outline-primary mx-4"><a href="/cookbook" alt="pantry button"className="text-decoration-none">Cookbook</a></button>
+                <button className="btn btn-outline-primary mx-4"><a href="/login" alt="pantry button"className="text-decoration-none">Sign In/ Register</a></button>
             </ul>
         </nav>
 

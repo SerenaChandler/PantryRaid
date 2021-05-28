@@ -38,6 +38,7 @@ const Home = () => {
         <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-12 min-vh-100">
+
                 <Hero/>
                 <Searchbar
                 handleFormSubmit={handleFormSubmit}
@@ -64,9 +65,10 @@ const Home = () => {
                     ))}
 
 
-                </div>
-                </div>
-            
+
+                        </div>
+                    </div>
+
 
 
                 </div>

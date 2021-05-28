@@ -23,3 +23,4 @@ function renderSignUp(){
     </div>
   </form>`;
   };
+

@@ -1,7 +1,6 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import Recipes from "../../recipe.json";
+
 
 const RecipeCard = (props) => {
   const {title, image, description, ingredients, nutrition} = props
@@ -46,6 +45,7 @@ const RecipeCard = (props) => {
 
                             </div>
                         </div>
+
 
       
     </div>
