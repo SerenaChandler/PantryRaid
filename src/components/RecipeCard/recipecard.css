@@ -8,7 +8,8 @@
     z-index: 1;
     margin-bottom: 15px;
     align-items:center;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: auto;
 
 }
 
