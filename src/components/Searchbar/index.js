@@ -10,7 +10,7 @@ const Searchbar = (props) => {
     
           <div className="col-lg-12">
             <div className="container">
-              <h1>Recipe Search</h1>
+              <h1 className="text-light">Recipe Search</h1>
               <form
                 className="form-inline my-2 my-lg-0"
                 onSubmit={handleFormSubmit}

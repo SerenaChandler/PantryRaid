@@ -21,27 +21,27 @@ const RecipeCard = (props) => {
          */}
         <div class="row mt-4">
                             <div class="col-3 text-center">
-                                <h1>{title}</h1>
+                                <h1 className="text-light">{title}</h1>
                                 <img src={image} alt="" width="250" height="250"/>
                             </div>
 
                             <div class="col-3 text-center">
-                                <h1>Description</h1>
-                                <p>{description}</p>
+                                <h1 className="text-light">Description</h1>
+                                <p className="text-light">{description}</p>
                             </div>
 
                             <div class="col-3 text-center">
-                                <h1>Ingredients</h1>
+                                <h1 className="text-light">Ingredients</h1>
                                 <ul style={{"list-style": "none"}}>
-                                  <li>{ingredients}</li>
+                                  <li className="text-light">{ingredients}</li>
                                     
                                   
                                 </ul>
                             </div>
 
                             <div class="col-3 text-center">
-                                <h1>Nutritional info</h1>
-                                <p>{nutrition}</p>
+                                <h1 className="text-light">Nutritional info</h1>
+                                <p className="text-light">{nutrition}</p>
 
                             </div>
                         </div>
