@@ -3,7 +3,7 @@ import "./recipecard.css"
 
 
 const RecipeCard = (props) => {
-  const { title, image, description, ingredients, nutrition } = props
+  const {title, image, description, ingredients, nutrition} = props
   return (
     <div>
 <div className="recipecard">
@@ -11,8 +11,8 @@ const RecipeCard = (props) => {
 <div className="right"><h3>{title}</h3>
 <p className="description">{description}</p>
 <div className="ingredients">
-<ul style={{"list-style": "none"}}>
-      {ingredients.map((ingredient) => <li>{ingredient}</li>)}
+<ul className="columns" data-columns="2">
+{ingredients.map((ingredient) => <li>{ingredient}</li>)}
         
       
     </ul>
@@ -20,7 +20,6 @@ const RecipeCard = (props) => {
 
 </div>
 </div>
-
     </div>
   );
 };
