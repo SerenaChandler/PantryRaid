@@ -2,34 +2,35 @@ import React from "react";
 import Recipes from "../../recipe.json";
 
 const RecipeCard = (props) => {
-
-  
+  const { title, image, description, ingredients, nutrition } = props;
 
   return (
     <div>
       {Recipes.map((recipe) => (
         <div class="row mt-4 d-flex justify-content-center">
           <div class="col-2 text-center">
-            <h1 className="text-light">{recipe.name}</h1>
+            <h1 className="text-light">{title}</h1>
             <img src={recipe.image} alt="" width="250" height="250" />
           </div>
 
           <div class="col-2 text-center">
             <h1 className="text-light">Description</h1>
-            <p className="text-light">{recipe.description}</p>
+            <p className="text-light">{description}</p>
           </div>
 
           <div class="col-2 text-center">
             <h1 className="text-light">Ingredients</h1>
             <ul style={{ "list-style": "none" }}>
-              {recipe.ingredients.map((ingredient) => <li className="text-light">{ingredient}</li>)}
+              {ingredients.map((ingredient) => (
+                <li className="text-light">{ingredient}</li>
+              ))}
             </ul>
           </div>
 
           <div class="col-2 text-center">
             <h1 className="text-light">Nutritional info</h1>
             <ul style={{ "list-style": "none" }}>
-              {recipe.nutrition.map((nutrition) => <li className="text-light">{nutrition}</li>)}
+              <li className="text-light"></li>
             </ul>
           </div>
 
@@ -44,7 +45,6 @@ const RecipeCard = (props) => {
             </ul>
           </div>
         </div>
-
       ))}
     </div>
   );

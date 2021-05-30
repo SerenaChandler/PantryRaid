@@ -43,7 +43,7 @@ export default {
   },
 
 
-  getSavedRecipies: function () {
+  getSavedRecipes: function () {
     return axios.get("/api/Recipe");
   }
   
