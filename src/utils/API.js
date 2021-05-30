@@ -39,7 +39,7 @@ export default {
   },
 
   saveRecipe: function (savedRecipe) {
-    return axios.post("/api/Recipe/",  savedRecipe)
+    return axios.post("/api/Recipe/", savedRecipe)
   },
 
 
