@@ -37,4 +37,9 @@ export default {
       `https://api.edamam.com/api/food-database/v2/parser?ingr=${search}&app_id=9aa9d53e&app_key=f2084d29ccda80e5c667c848bcdba419 `
     );
   },
+
+  saveRecipe: function (savedRecipe) {
+    return axios.post("/api/Recipe/" + savedRecipe)
+  },
+  
 };
