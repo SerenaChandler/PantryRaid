@@ -31,6 +31,19 @@ const Home = () => {
         .catch((err) => console.log(err))
     }
 
+    const saveFood = (recipeInfo) => {
+        const savedRecipe = [{
+            name: recipeInfo.label,
+            image: recipeInfo.image,
+            description: recipeInfo.cuisineType,
+            ingredients: recipeInfo.ingredientLines
+        }]
+        console.log("Saved ", savedRecipe);
+        API.saveRecipe(savedRecipe)
+        .then((response) => {
+            console.log(response)
+        });
+    }
 
 
 
@@ -55,6 +68,7 @@ const Home = () => {
                 <RecipeCard
                 //  id={recipe.id}
                 //  key={recipe.id}
+                 saveFood={saveFood}
                  title={recipe.label}
                  image={recipe.image}
                  description={recipe.cuisineType}
