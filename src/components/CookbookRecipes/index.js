@@ -1,7 +1,9 @@
 import React from "react";
 import Recipes from "../../recipe.json";
 
-const RecipeCard = () => {
+const RecipeCard = (props) => {
+
+  
 
   return (
     <div>

@@ -1,8 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CookbookRecipes from "../components/CookbookRecipes"
+import API from "../utils/API"
 // import ChecklistDropdown from "./components/ChecklistDropdown"
 
 const Cookbook = () => {
+
+    const [savedRecipes, setSavedRecipes] = useState([])
+
+    useEffect(() => {
+        API.getSavedRecipes()
+        .then((results) => {
+            setSavedRecipes(results.data);
+            console.log(results);
+          }).catch((err) => console.log(err))
+    }, [])
+    
+
+
+
     // functions for handling search and checkboxes
     return (
         <div className="container-fluid">
@@ -10,8 +25,14 @@ const Cookbook = () => {
                 <div className="col-lg-12 min-vh-100">
                     <div className="row">
                         <div className="d-flex justify-content-center">
-                            <CookbookRecipes />
-                            {/* maybe this needs to be passed a function or prop or something for keeping track of the missing ingredients */}
+
+                            {savedRecipes.map((recipe) => (
+                            <CookbookRecipes 
+                            
+                            
+                            
+                            />))}
+                            
 
                         </div>
                     </div>
