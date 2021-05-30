@@ -45,6 +45,7 @@ const Pantry = () => {
             {returnedIngredients.map(({ food }) => (
               <IngredientCards label={food.label} image={food.image} />
             ))}
+            
           </div>
         </div>
       </div>
