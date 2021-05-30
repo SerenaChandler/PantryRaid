@@ -16,7 +16,7 @@ Recipe.init(
     },
 
     image: {
-      type: DataTypes.image,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     instructions: {
