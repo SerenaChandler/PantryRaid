@@ -2,7 +2,7 @@ import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
 
 const Ingredients = (props) => {
-  const { label, image, nutrition } = props;
+  const { label, image, nutrition, saveIngredient } = props;
 
   return (
     // <div>
@@ -33,6 +33,8 @@ const Ingredients = (props) => {
         <h1 className="text-light">Nutritional info</h1>
         <p className="text-light"></p>
       </div>
+
+      <button onClick={saveIngredient}>Save Ingredient to Pantry</button>
     </div>
   );
 };

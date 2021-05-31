@@ -39,12 +39,21 @@ export default {
   },
 
   saveRecipe: function (savedRecipe) {
-    return axios.post("/api/Recipe/", savedRecipe)
+    return axios.post("/api/Recipe", savedRecipe)
+  },
+  
+
+  saveIngredient: function (savedIngredient) {
+    return axios.post("/api/Ingredient", savedIngredient)
   },
 
 
   getSavedRecipes: function () {
     return axios.get("/api/Recipe");
+  },
+
+  getSavedIngredients: function () {
+    return axios.get("/api/Ingredient");
   }
   
 };

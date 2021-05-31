@@ -11,6 +11,7 @@ const Pantry = () => {
 
   const [search, setSearch] = useState("");
   const [returnedIngredients, setReturnedIngredients] = useState([]);
+  const [savedIngredients, setSavedIngredients] = useState([]);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -31,14 +32,22 @@ const Pantry = () => {
       .catch((err) => console.log(err));
   };
 
-
   useEffect(() => {
-    API.getSavedRecipes()
-    .then((results) => {
-        setSavedRecipes(results.data);
+    API.getSavedIngredients()
+      .then((results) => {
+        setSavedIngredients(results.data);
         console.log(results);
-      }).catch((err) => console.log(err))
-}, [])
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  const saveIngredient = (recipeInfo) => {
+    const savedIngredient = [{}];
+    console.log("Saved ", savedIngredient);
+    API.saveIngredient(savedIngredient).then((response) => {
+      console.log(response);
+    });
+  };
 
   return (
     <div className="container-fluid">
@@ -52,9 +61,12 @@ const Pantry = () => {
               search={search}
             />
             {returnedIngredients.map(({ food }) => (
-              <IngredientCards label={food.label} image={food.image} />
+              <IngredientCards 
+              label={food.label} 
+              image={food.image}
+              saveIngredient={saveIngredient}
+              />
             ))}
-            
           </div>
         </div>
       </div>
