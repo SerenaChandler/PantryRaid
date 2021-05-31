@@ -31,6 +31,15 @@ const Pantry = () => {
       .catch((err) => console.log(err));
   };
 
+
+  useEffect(() => {
+    API.getSavedRecipes()
+    .then((results) => {
+        setSavedRecipes(results.data);
+        console.log(results);
+      }).catch((err) => console.log(err))
+}, [])
+
   return (
     <div className="container-fluid">
       <div className="row">
