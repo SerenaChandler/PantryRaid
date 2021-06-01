@@ -19,9 +19,15 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     remove: function(req, res){
-        db.Recipe.findById({id:req.params.id})
-        .then(dbModel => dbModel.remove())
+        console.log(req.params.id)
+        db.Recipe.findByPk(req.params.id)
+        .then(dbModel =>{ 
+            console.log("meow")
+            dbModel.destroy()
+        })
         .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err));
+        .catch(err => { 
+            console.log("bark")
+            res.status(422).json(err)});
     }
 }

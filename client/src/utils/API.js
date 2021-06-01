@@ -57,6 +57,7 @@ export default {
   },
   
   deleteRecipe: function(id) {
+    console.log("coke coffee")
     return axios.delete("/api/Recipe/" + id);
   }
 
