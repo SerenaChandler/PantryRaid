@@ -14,7 +14,7 @@ const RecipeCard = (props) => {
 <p className="description">{description}</p>
 <div className="ingredients">
 <ul className="columns" data-columns="2">
-{ingredients.map((ingredient) => <li>{ingredient}</li>)}
+{ingredients.map((ingredient) => <li className="text-light">{ingredient}</li>)}
         
       
     </ul>

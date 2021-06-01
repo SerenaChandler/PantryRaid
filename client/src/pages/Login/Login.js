@@ -39,18 +39,20 @@ const Login = () => {
 
    return (
       <div>
-         <Hero />
+         
          <div className="sidenav">
             <div className="login-main-text">
                <img src="logo2.jpg" alt="logo"></img>
             </div>
          </div>
+
          <LoginForm 
          loginUser = {() => loginUser()}
          />
          <RegisterForm
          //makeUser = {() => registerFormHandler()}
          />
+
       </div>
    );
 };
