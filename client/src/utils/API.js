@@ -56,8 +56,15 @@ export default {
     return axios.get("/api/Ingredient");
   },
 
+
   saveUser: function (savedUser) {
     return axios.post("/api/User", savedUser)
   }
+
   
+  deleteRecipe: function(id) {
+    console.log("coke coffee")
+    return axios.delete("/api/Recipe/" + id);
+  }
+
 };

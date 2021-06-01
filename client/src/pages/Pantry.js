@@ -3,6 +3,7 @@ import PantryMyFridge from "../components/PantryMyFridge";
 import IngredientContainer from "../components/IngredientContainer";
 import API from "../utils/API";
 import IngredientCards from "../components/ingredientCards";
+import "./style.css"
 
 // import ChecklistDropdown from "./components/ChecklistDropdown"
 
@@ -54,16 +55,17 @@ const Pantry = () => {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-lg-12 min-vh-100">
-          <div className="row">
-            <PantryMyFridge />
-            <IngredientContainer
+<div className="flex">
+<div className="searchbar">
+  <IngredientContainer
               handleFormSubmit={handleFormSubmit}
               handleInputChange={handleInputChange}
               search={search}
-            />
+            /></div>
+<div className="left">
+<PantryMyFridge />
+ </div>
+<div className="right">  <ul class="list-group">
             {returnedIngredients.map(({ food }) => (
               <IngredientCards 
               label={food.label} 
@@ -71,11 +73,24 @@ const Pantry = () => {
               saveIngredient={() => saveIngredient(food)}
               />
             ))}
-          </div>
-        </div>
-      </div>
-    </div>
+            </ul></div>
+</div>
+
+
+    // <div className="container-fluid">
+    //   <div className="row">
+    //     <div className="col-lg-12 min-vh-100">
+    //       <div className="row">
+    //         <PantryMyFridge />
+
+
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 
 export default Pantry;
+
+// comment
