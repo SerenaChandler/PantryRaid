@@ -92,3 +92,5 @@ const Pantry = () => {
 };
 
 export default Pantry;
+
+// comment
