@@ -57,7 +57,7 @@ export default {
   },
   
   deleteRecipe: function(id) {
-    return axios.delete("/api/Recipe")
+    return axios.delete("/api/Recipe/" + id);
   }
 
 };
