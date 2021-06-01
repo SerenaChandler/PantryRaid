@@ -1,10 +1,42 @@
 import React from 'react';
 import Hero from '../../components/Hero/index';
+import LoginForm from '../../components/LoginForm/index';
+import RegisterForm from '../../components/RegisterForm/index';
 import './style.css';
-import './script.js';
 
 
 const Login = () => {
+
+   const loginUser = () => {
+
+   }
+
+   // const makeUser = () => {
+      
+   // }
+
+//    const registerFormHandler = async (event) => {
+//       event.preventDefault();
+  
+//       const userName = document.querySelector('#register-username').value.trim();
+//       const password = document.querySelector('#register-password').value.trim();
+  
+//       if (userName && password) {
+//           const response = await fetch('/api/User',{
+//               method:'POST',
+//               body: JSON.stringify({userName,password}),
+//               headers: { 'Content-Type': 'application/json'},
+//           });
+  
+//           if (response.ok) {
+//               document.location.replace('/');
+//           } else {
+//              console.log("u messed up guy");
+//               alert(response.statusText);
+//           }
+//       }
+//   };
+
    return (
       <div>
          
@@ -13,46 +45,14 @@ const Login = () => {
                <img src="logo2.jpg" alt="logo"></img>
             </div>
          </div>
-         
-         <div className="main">
-            <div className="col-md-6 col-sm-12">
-               <div id="formbox">
-                  <div className="login-form">
-                     <form>
-                        <div className="form-group">
-                           <label className="text-light">User Name</label>
-                           <input type="text" className="form-control" placeholder="User Name" />
 
-                        </div>
-                        <div className="form-group">
-                           <label>Password</label>
-                           <input type="password" className="form-control" placeholder="Password" />
-                        </div>
-                        <button type="submit" className="btn btn-black">Login</button>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div className="main">
-            <div className="col-md-6 col-sm-12">
-               <div id="formbox">
-                  <div className="register-form">
-                     <form>
-                        <div className="form-group">
-                           <label>User Name</label>
-                           <input type="text" className="form-control" placeholder="User Name" />
-                        </div>
-                        <div className="form-group">
-                           <label>Password</label>
-                           <input type="password" className="form-control" placeholder="Password" />
-                        </div>
-                        <button type="submit" className="btn btn-black">Register</button>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
+         <LoginForm 
+         loginUser = {() => loginUser()}
+         />
+         <RegisterForm
+         //makeUser = {() => registerFormHandler()}
+         />
+
       </div>
    );
 };
