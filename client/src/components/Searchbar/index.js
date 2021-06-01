@@ -6,7 +6,7 @@ const Searchbar = (props) => {
   return (
     <div className="row">
       <div className="col-lg-12">
-        <div className="container">
+        <div className="container py-5">
           <h1 className="text-light">Recipe Search</h1>
           <form
             className="form-inline my-2 my-lg-0"
