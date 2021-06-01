@@ -1,0 +1,13 @@
+.search {
+    width: 100%;
+    margin-left: 100px;
+    margin-right: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.form{
+    display: flex;
+    width: 90vmax;
+}

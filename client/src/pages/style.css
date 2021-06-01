@@ -1,0 +1,35 @@
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+
+
+
+.left{
+display: flex;
+align-items: flex-start;
+max-width: 600px;
+flex: 50%;
+text-align: left;
+padding-left: 20px;
+color: black;
+}
+
+.right{
+display: flex;
+align-items: flex-start;
+max-width: 300px;
+flex: 50%;
+text-align: left;
+
+}
+
+.searchbar{
+    display: flex;
+    width: 100%;
+    margin: 10px;
+
+
+}
