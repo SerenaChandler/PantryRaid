@@ -37,7 +37,7 @@ const Home = () => {
       {
         name: recipeInfo.label,
         image: recipeInfo.image,
-        description: recipeInfo.cuisineType,
+        // description: recipeInfo.cuisineType[0],
         link: recipeInfo.url,
         // ingredients: recipeInfo.ingredientLines,
       }

@@ -54,6 +54,11 @@ export default {
 
   getSavedIngredients: function () {
     return axios.get("/api/Ingredient");
-  }
+  },
   
+  deleteRecipe: function(id) {
+    console.log("coke coffee")
+    return axios.delete("/api/Recipe/" + id);
+  }
+
 };
