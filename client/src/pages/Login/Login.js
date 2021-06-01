@@ -7,12 +7,13 @@ import './script.js';
 const Login = () => {
    return (
       <div>
-         <Hero />
+         
          <div className="sidenav">
             <div className="login-main-text">
                <img src="logo2.jpg" alt="logo"></img>
             </div>
          </div>
+         
          <div className="main">
             <div className="col-md-6 col-sm-12">
                <div id="formbox">

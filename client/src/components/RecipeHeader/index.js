@@ -6,7 +6,8 @@ const RecipeHeader = () => {
                 
         <div className="row">
         <div className="col-lg-12">
-            <h1 className="text-center text-light">Recipes:</h1>
+            {/* <h1 className="text-center text-light">Recipes:</h1> */}
+            <br/>
         </div>
     </div>
 
