@@ -19,23 +19,26 @@ Recipe.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    instructions: {
-      type: DataTypes.STRING,
-    },
+    // instructions: {
+    //   type: DataTypes.STRING,
+    // },
     description: {
       type: DataTypes.STRING
     },
-    link: {
-      type: DataTypes.STRING
-    },
+    // ingredients: {
+    //   type: DataTypes.STRING
+    // },
+    // link: {
+    //   type: DataTypes.STRING
+    // },
 
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "User",
-        key: "id",
-      },
-    },
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "User",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     sequelize,
