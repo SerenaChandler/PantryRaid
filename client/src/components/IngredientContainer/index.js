@@ -1,32 +1,28 @@
 import React from "react";
+import "./style.css"
 
 const PantryMyFridge = (props) => {
   const { search, handleFormSubmit, handleInputChange } = props;
   return (
-    <div className="col-lg-6">
-      <div className="container d-flex justify-content-center">
-        <form className="form-inline my-2 my-lg-0" onSubmit={handleFormSubmit}>
+        <form className="form" onSubmit={handleFormSubmit}>
           <input
             value={search}
             name="search"
             onChange={handleInputChange}
-            className="form-control mr-sm-2 "
+            className="search"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
-          <div className="d-flex justify-content-end mt-4">
             <button
               className="btn btn-outline-success my-2 my-sm-0"
               type="submit"
             >
               Search
             </button>
-          </div>
         </form>
-      </div>
-    </div>
   );
 };
 
 export default PantryMyFridge;
+// comment
