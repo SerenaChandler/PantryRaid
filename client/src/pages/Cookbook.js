@@ -15,6 +15,16 @@ const Cookbook = () => {
           }).catch((err) => console.log(err))
     }, [])
     
+    const deleteFood = (currentRecipe) => {
+        API.deleteRecipe(currentRecipe.id)
+        .then(res => {
+            console.log("you deleted this recipe", res)
+            this.getSavedRecipes()
+        })
+        .catch(err => {
+            console.log("This is the error", err);
+        })
+    }
 
 
 
@@ -28,9 +38,10 @@ const Cookbook = () => {
 
                             {savedRecipes.map((recipe) => (
                             <CookbookRecipes 
-                            
+                            deleteFood={() => deleteFood(recipe) }
                             title={recipe.name}
                             image={recipe.image}
+                            link={recipe.link}
                             
                            
                             />
