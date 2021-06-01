@@ -34,7 +34,7 @@ const Home = () => {
   const saveFood = (recipeInfo) => {
     const savedRecipe = [
       {
-        name: recipeInfo.recipe.label,
+        name: recipeInfo.label,
         image: recipeInfo.image,
         description: recipeInfo.cuisineType,
         ingredients: recipeInfo.ingredientLines,

@@ -7,9 +7,11 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     save: function(req, res){
+        console.log(req.body)
         db.Recipe.create(req.body)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
+
     },
     findById: function(req, res){
         db.Recipe.findById(req.params.id)
