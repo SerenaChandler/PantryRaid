@@ -37,7 +37,8 @@ const Home = () => {
       {
         name: recipeInfo.label,
         image: recipeInfo.image,
-        description: recipeInfo.cuisineType[0],
+        description: recipeInfo.cuisineType,
+        link: recipeInfo.url,
         // ingredients: recipeInfo.ingredientLines,
       }
     
@@ -70,6 +71,7 @@ const Home = () => {
                   image={recipe.image}
                   description={recipe.cuisineType}
                   ingredients={recipe.ingredientLines}
+                  link={recipe.url}
                   //  nutrition={recipe.recipe.nutrition}
                 />
               ))}
