@@ -41,8 +41,12 @@ const Pantry = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  const saveIngredient = (recipeInfo) => {
-    const savedIngredient = [{}];
+  const saveIngredient = (ingredientInfo) => {
+    const savedIngredient = [{
+      name: ingredientInfo.label,
+      image: ingredientInfo.image
+
+    }];
     console.log("Saved ", savedIngredient);
     API.saveIngredient(savedIngredient).then((response) => {
       console.log(response);
