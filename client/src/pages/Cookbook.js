@@ -28,11 +28,11 @@ const Cookbook = () => {
 
                             {savedRecipes.map((recipe) => (
                             <CookbookRecipes 
-                            key={recipe.label}
-                            title={recipe.label}
+                            
+                            title={recipe.name}
                             image={recipe.image}
-                            description={recipe.cuisineType}
-                            ingredients={recipe.ingredientLines}
+                            
+                           
                             />
                             ))}
                             

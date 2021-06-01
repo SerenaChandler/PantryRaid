@@ -42,11 +42,11 @@ const Pantry = () => {
   }, []);
 
   const saveIngredient = (ingredientInfo) => {
-    const savedIngredient = [{
+    const savedIngredient = {
       name: ingredientInfo.label,
       image: ingredientInfo.image
 
-    }];
+    }
     console.log("Saved ", savedIngredient);
     API.saveIngredient(savedIngredient).then((response) => {
       console.log(response);
@@ -68,7 +68,7 @@ const Pantry = () => {
               <IngredientCards 
               label={food.label} 
               image={food.image}
-              saveIngredient={saveIngredient}
+              saveIngredient={() => saveIngredient(food)}
               />
             ))}
           </div>
