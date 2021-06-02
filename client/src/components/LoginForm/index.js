@@ -1,7 +1,33 @@
-import React from 'react';
+import React,{useState} from 'react';
+import API from '../../utils/API';
 import './style.css';
 
 const LoginForm = (props) => {
+
+   const [loginData, setLoginState] = useState({name:"",password:""});
+   const [loggedIn, setLoggedIn] = useState(false);
+
+   const handleChange = (event) => {
+      setLoginState({...loginData,[event.target.name]: event.target.value})
+   }
+
+   const toggleLogin = () => setLoggedIn(value => !value);
+
+   const checkCreds = (event) => {
+      event.preventDefault();
+      console.log(loginData);
+      API.checkUser(loginData)
+      .then((results)=>{
+         console.log(results);
+         toggleLogin();
+         console.log(loggedIn)
+      })
+      .catch((err) => {
+         console.log(err);
+      })
+
+   }
+
     return (
     <div className="main">
     <div className="col-md-6 col-sm-12">
@@ -10,13 +36,13 @@ const LoginForm = (props) => {
              <form>
                 <div className="form-group">
                    <label className="text-light">User Name</label>
-                   <input type="text" className="form-control" placeholder="User Name" />
+                   <input name="name" onChange={handleChange} value={loginData.name} type="text" className="form-control" placeholder="User Name" />
                 </div>
                 <div className="form-group">
                    <label>Password</label>
-                   <input type="password" className="form-control" placeholder="Password" />
+                   <input name="password" onChange={handleChange} value={loginData.password} type="password" className="form-control" placeholder="Password" />
                 </div>
-                <button onClick={props.loginUser} type="submit" className="btn btn-black">Login</button>
+                <button onClick={checkCreds} type="submit" className="btn btn-black">Login</button>
              </form>
           </div>
        </div>

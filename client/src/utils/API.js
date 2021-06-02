@@ -60,7 +60,11 @@ export default {
 
   saveUser: function (savedUser) {
     return axios.post("/api/User", savedUser)
-  }
+  },
+
+  checkUser: function(loginData){
+    return axios.post("api/User", loginData)
+  },
 
   
   deleteRecipe: function(id) {
