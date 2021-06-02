@@ -77,42 +77,89 @@ const Pantry = () => {
   };
 
   return (
-    <div className="flex">
+    // <div className="flex">
 
-      <div className="searchbar">
-        <IngredientContainer
-          handleFormSubmit={handleFormSubmit}
-          handleInputChange={handleInputChange}
-          search={search}
-        />
-      </div>
+    //   <div className="searchbar">
+    //     <IngredientContainer
+    //       handleFormSubmit={handleFormSubmit}
+    //       handleInputChange={handleInputChange}
+    //       search={search}
+    //     />
+    //   </div>
 
-      <div className="left">
-        {savedIngredients.map((ingredient) => (
-          <PantryMyFridge
-            deleteIngredient={() => deleteIngredient(ingredient)}
-            id={ingredient.id}
-            label={ingredient.name}
-            image={ingredient.image}
-          />
-        ))}
-      </div>
+    //   <div className="left">
+    //     {savedIngredients.map((ingredient) => (
+    //       <PantryMyFridge
+    //         deleteIngredient={() => deleteIngredient(ingredient)}
+    //         id={ingredient.id}
+    //         label={ingredient.name}
+    //         image={ingredient.image}
+    //       />
+    //     ))}
+    //   </div>
 
-      <div className="right">
-        {" "}
-        <ul className="list-group">
-          {returnedIngredients.map(({ food }) => (
-            <IngredientCards
-              label={food.label}
-              image={food.image}
-              saveIngredient={() => saveIngredient(food)}
+    //   <div className="right">
+    //     {" "}
+    //     <ul className="list-group">
+    //       {returnedIngredients.map(({ food }) => (
+    //         <IngredientCards
+    //           label={food.label}
+    //           image={food.image}
+    //           saveIngredient={() => saveIngredient(food)}
+    //         />
+    //       ))}
+    //     </ul>
+    //   </div>
+    // </div>
+
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-lg-12 min-vh-100">
+          <div className="searchbar">
+            <IngredientContainer
+              handleFormSubmit={handleFormSubmit}
+              handleInputChange={handleInputChange}
+              search={search}
             />
-          ))}
-        </ul>
+          </div>
+
+          <div className="row">
+            <div className="col-md-6">
+              {savedIngredients.map((ingredient) => (
+                <PantryMyFridge
+                  deleteIngredient={() => deleteIngredient(ingredient)}
+                  id={ingredient.id}
+                  label={ingredient.name}
+                  image={ingredient.image}
+                />
+              ))}
+
+
+            </div>
+
+            <div className="col-md-6">
+              {" "}
+              <ul className="list-group">
+                {returnedIngredients.map(({ food }) => (
+                  <IngredientCards
+                    label={food.label}
+                    image={food.image}
+                    saveIngredient={() => saveIngredient(food)}
+                  />
+                ))}
+              </ul>
+
+
+            </div>
+          </div>
+
+
+
+        </div>
       </div>
-
-
     </div>
+
+
   );
 };
 
