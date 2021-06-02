@@ -53,6 +53,7 @@ export default {
   },
 
   getSavedIngredients: function () {
+    console.log("pleeeeeease")
     return axios.get("/api/Ingredient");
   },
 
