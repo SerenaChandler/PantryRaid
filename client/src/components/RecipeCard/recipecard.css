@@ -1,4 +1,5 @@
 .recipecard{
+    padding: 0px;
     margin:auto;
     border-radius: 20px;
     border: 1px solid white;
@@ -14,38 +15,18 @@
 
 }
 
-.saveBtn{
-    top: 0;
-    right: 0;
-}
 
 .recipecard::-webkit-scrollbar{
     display:none
 }
 
-
-
-.left{
-    height: 400px;
-    width: 400px;
-    display: flex;
-    align-items: center;
-    padding: 0px;
-    background-repeat: no-repeat;
-    background-size: 400px;
-    border-radius: 20px 0px 0px 20px;
-    z-index: -1;
+.content{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
-.right{
-    text-align: center;
-    width: 70%;
-    color: white;
-}
-
-
-ul {
-  list-style: none;
+li{
+color: white;
 }
 
 .description{
@@ -55,4 +36,19 @@ ul {
     text-align: left;
     justify-content: left;
     column-count: 2;
+}
+
+.columns {
+    columns: 200px 2;
+}
+
+.buttoncontainer {
+    display: flex;
+    justify-content:space-evenly;
+    padding-left: 10%;
+
+}
+
+a {
+    color: white;
 }
