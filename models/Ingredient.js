@@ -20,6 +20,11 @@ Ingredient.init(
       allowNull: true,
     },
 
+    search: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    }
+
     // user_id: {
     //   type: DataTypes.INTEGER,
     //   references: {
