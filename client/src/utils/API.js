@@ -39,42 +39,37 @@ export default {
   },
 
   saveRecipe: function (savedRecipe) {
-    return axios.post("/api/Recipe", savedRecipe)
+    return axios.post("/api/Recipe", savedRecipe);
   },
-  
 
   saveIngredient: function (savedIngredient) {
-    return axios.post("/api/Ingredient", savedIngredient)
+    return axios.post("/api/Ingredient", savedIngredient);
   },
-
 
   getSavedRecipes: function () {
     return axios.get("/api/Recipe");
   },
 
   getSavedIngredients: function () {
-    console.log("pleeeeeease")
+    console.log("pleeeeeease");
     return axios.get("/api/Ingredient");
   },
 
-
   saveUser: function (savedUser) {
-    return axios.post("/api/User", savedUser)
+    return axios.post("/api/User", savedUser);
   },
 
-  checkUser: function(loginData){
-    return axios.post("api/User/login", loginData)
+  checkUser: function (loginData) {
+    return axios.post("api/User/login", loginData);
   },
 
-  
-  deleteRecipe: function(id) {
-    console.log("coke coffee")
+  deleteRecipe: function (id) {
+    console.log("coke coffee");
     return axios.delete("/api/Recipe/" + id);
   },
 
-  deleteIngredient: function(id) {
-    console.log("coke not coffee")
+  deleteIngredient: function (id) {
+    console.log("coke not coffee");
     return axios.delete("/api/Ingredient/" + id);
-  }
-
+  },
 };
