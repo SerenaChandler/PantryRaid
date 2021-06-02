@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css"
 
-const PantryMyFridge = (props) => {
+const IngredientContainer = (props) => {
   const { search, handleFormSubmit, handleInputChange } = props;
   return (
         <form className="form" onSubmit={handleFormSubmit}>
@@ -24,5 +24,5 @@ const PantryMyFridge = (props) => {
   );
 };
 
-export default PantryMyFridge;
+export default IngredientContainer;
 // comment

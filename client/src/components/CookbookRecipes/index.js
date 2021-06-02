@@ -1,35 +1,14 @@
 import React from "react";
-import Recipes from "../../recipe.json";
+// import Recipes from "../../recipe.json";
 
 const RecipeCard = (props) => {
-  const {
-    title,
-    image,
-    description,
-    ingredients,
-    nutrition,
-    link,
-    deleteFood,
-  } = props;
-
+  const {title, image, link, deleteFood} = props
   return (
-    <div>
-      <div className="recipecard">
-        <div className="left" style={{ backgroundImage: `url("${image}")` }}>
-          &nbsp;
-        </div>
-
-        <a href={link} target="_blank" rel="noreferrer">
-          <button className="saveBtn">go to full recipe</button>{" "}
-        </a>
-        <div className="right">
-          <h3>{title}</h3>
-
-          <div className="ingredients">
-            <ul className="columns" data-columns="2"></ul>
-          </div>
-        </div>
-        <button onClick={deleteFood}>Delete Recipe</button>
+    <div className="row d-flex justify-content-center">
+      <div className="col-md-10">
+        <img src={image} alt={title}/>
+        <p className="text-center text-light"><a href={link} target="_blank" rel="noreferrer" className="text-decoration-none">{title}</a></p>
+        <button onClick={deleteFood}>Remove from Cookbook</button>
       </div>
     </div>
   );

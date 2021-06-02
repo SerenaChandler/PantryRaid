@@ -39,7 +39,7 @@ const Cookbook = () => {
             <div className="row">
                 <div className="col-lg-12 min-vh-100">
                     <div className="row">
-                        <div className="d-flex justify-content-center">
+                        
 
                             {savedRecipes.map((recipe) => (
                             <CookbookRecipes 
@@ -54,7 +54,7 @@ const Cookbook = () => {
                             ))}
                             
 
-                        </div>
+                        
                     </div>
                 </div>
             </div>
