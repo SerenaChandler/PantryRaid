@@ -16,6 +16,7 @@ const RegisterForm = () => {
       API.saveUser(userData)
          .then((results) => {
             console.log(results);
+            window.location.replace("/");
          })
          .catch((err) => console.log(err));
    };
