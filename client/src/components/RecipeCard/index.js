@@ -1,27 +1,21 @@
 import React from "react";
-import "./recipecard.css"
+// import "./recipecard.css"
 
 
 const RecipeCard = (props) => {
   const {title, image, description, ingredients, nutrition, link, saveFood} = props
   return (
-    <div>
-<div className="recipecard">
-<div className="left" style={{ backgroundImage: `url("${image}")`}}>&nbsp;</div>
-<button onClick={saveFood} className="saveBtn">Save Recipe</button>
-<a href={link} target="_blank" rel="noreferrer" ><button className="saveBtn">go to full recipe</button> </a>
-<div className="right"><h3>{title}</h3>
-<p className="description">{description}</p>
-<div className="ingredients">
-<ul className="columns" data-columns="2">
-{ingredients.map((ingredient) => <li className="text-light">{ingredient}</li>)}
-        
-      
-    </ul>
-</div>
+    <div className="row d-flex justify-content-center">
+      <div className="col-md-10">
+        <img src={image} alt={title}/>
+        <h1 className="text-center text-light"><a href={link} target="_blank" rel="noreferrer" className="text-decoration-none">{title}</a></h1>
+        <p className="text-center text-light">{description}</p>
+        <ul className="list-group list-group-flush">
+        {ingredients.map((ingredient) => <li className="text-light text-center list-group-item">{ingredient}</li>)}
+        <button onClick={saveFood} className="">Save Recipe</button>
+        </ul>
 
-</div>
-</div>
+      </div>
     </div>
   );
 };
