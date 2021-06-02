@@ -46,6 +46,7 @@ const Pantry = () => {
     const savedIngredient = {
       name: ingredientInfo.label,
       image: ingredientInfo.image,
+  
     };
     console.log("Saved ", savedIngredient);
     API.saveIngredient(savedIngredient).then((response) => {
@@ -77,6 +78,7 @@ const Pantry = () => {
   };
 
   return (
+
     // <div className="flex">
 
     //   <div className="searchbar">
@@ -120,6 +122,7 @@ const Pantry = () => {
               handleFormSubmit={handleFormSubmit}
               handleInputChange={handleInputChange}
               search={search}
+
             />
           </div>
 
