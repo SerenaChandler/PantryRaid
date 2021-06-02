@@ -5,10 +5,13 @@ import './style.css';
 const LoginForm = (props) => {
 
    const [loginData, setLoginState] = useState({name:"",password:""});
+   const [loggedIn, setLoggedIn] = useState(false);
 
    const handleChange = (event) => {
       setLoginState({...loginData,[event.target.name]: event.target.value})
    }
+
+   const toggleLogin = () => setLoggedIn(value => !value);
 
    const checkCreds = (event) => {
       event.preventDefault();
@@ -16,6 +19,8 @@ const LoginForm = (props) => {
       API.checkUser(loginData)
       .then((results)=>{
          console.log(results);
+         toggleLogin();
+         console.log(loggedIn)
       })
       .catch((err) => {
          console.log(err);
