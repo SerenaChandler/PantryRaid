@@ -1,5 +1,8 @@
 .recipecard{
-    padding: 0px;
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
     margin:auto;
     border-radius: 20px;
     border: 1px solid white;
@@ -23,10 +26,14 @@
 .content{
     padding-left: 0px;
     padding-right: 0px;
+    width: 100%;
+    margin: 0px;
 }
 
 li{
 color: white;
+font-size: 14px;
+line-height: 16px;
 }
 
 .description{
@@ -51,4 +58,9 @@ color: white;
 
 a {
     color: white;
+}
+
+h1{
+    font-size: 36px;
+    line-height: 30px;
 }
