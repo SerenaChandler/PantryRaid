@@ -12,7 +12,7 @@ const RecipeCard = (props) => {
         <p className="text-center text-light">{description}</p>
         <div className="buttoncontainer">
         <button onClick={saveFood} className="btn btn-primary">Save Recipe</button>
-        <a class="btn btn-success" href={link} target="_blank">View Recipe</a></div>
+        <a className="btn btn-success" href={link} target="_blank">View Recipe</a></div>
         <div className="columns">
         <ul>
         {ingredients.map((ingredient) => <li>{ingredient}</li>)}</ul></div>

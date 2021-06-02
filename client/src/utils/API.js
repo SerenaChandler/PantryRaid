@@ -75,6 +75,11 @@ export default {
   deleteIngredient: function(id) {
     console.log("coke not coffee")
     return axios.delete("/api/Ingredient/" + id);
+  },
+
+  updateIng: function(id,looking){
+    console.log("updated!");
+    return axios.put("/api/Ingredient/" + id,{looking});
   }
 
 };
