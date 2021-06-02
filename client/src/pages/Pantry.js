@@ -80,6 +80,17 @@ const Pantry = () => {
   const setLookie = (currIng) => {
     currIng.looking = !currIng.looking;
     console.log(currIng.looking);
+    console.log(currIng.id);
+    API.updateIng(currIng.id,currIng.looking)
+    .then((results) => {
+      console.log(results);
+      API.getSavedIngredients()
+      .then((results) => {
+        setSavedIngredients(results.data);
+        console.log(results);
+      })
+    })
+    .catch((err) => console.log(err));
   }
 
   return (

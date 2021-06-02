@@ -10,7 +10,8 @@ router
   router
   .route("/:id")
   .get(ingredientController.findById)
-  .delete(ingredientController.remove);
+  .delete(ingredientController.remove)
+  .put(ingredientController.update)
 
 
 module.exports = router;
