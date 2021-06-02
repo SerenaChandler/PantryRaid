@@ -51,29 +51,30 @@ const Pantry = () => {
     API.saveIngredient(savedIngredient).then((response) => {
       console.log(response);
       API.getSavedIngredients()
-      .then((results) => {
-        setSavedIngredients(results.data);
-        console.log(results);
-      })
-      .catch((err) => console.log(err));
+        .then((results) => {
+          setSavedIngredients(results.data);
+          console.log(results);
+        })
+        .catch((err) => console.log(err));
     });
   };
 
   const deleteIngredient = (currentIngredient) => {
-    console.log(currentIngredient)
+    console.log(currentIngredient);
     API.deleteRecipe(currentIngredient.id)
-    .then(res => {
-        console.log("you deleted this ingredient", res)
+      .then((res) => {
+        console.log("you deleted this ingredient", res);
         API.getSavedIngredients()
-        .then((results) => {
+          .then((results) => {
             setSavedIngredients(results.data);
             console.log(results);
-          }).catch((err) => console.log(err))
-    })
-    .catch(err => {
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => {
         console.log("This is the error", err);
-    })
-}
+      });
+  };
 
   return (
     <div className="flex">
@@ -87,7 +88,7 @@ const Pantry = () => {
       <div className="left">
         {savedIngredients.map((ingredient) => (
           <PantryMyFridge
-          deleteIngredient={() => deleteIngredient(ingredient)}
+            deleteIngredient={() => deleteIngredient(ingredient)}
             id={ingredient.id}
             label={ingredient.name}
             image={ingredient.image}

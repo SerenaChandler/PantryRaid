@@ -1,12 +1,14 @@
 import React from "react";
 
 const PantryMyFridge = (props) => {
-  const { label, image} = props;
+  const { label, image, deleteIngredient } = props;
   return (
-    <div className="list-group-item list-group-item-dark">
+    <li className="list-group-item list-group-item-dark">
       <img src={image} width="50px" height="50px" />
+
       <p className="label"> {label}</p>
-    </div>
+      <button onClick={deleteIngredient}>Delete ingredient </button>
+    </li>
   );
 };
 

@@ -6,10 +6,13 @@ const Ingredients = (props) => {
   const { label, image, nutrition, saveIngredient } = props;
 
   return (
-
     <li className="list-group-item list-group-item-dark">
-  <img src={image} width="50px" height="50px"/><p className="label"> {label} <button onClick={saveIngredient}>Save to Fridge</button></p>
-</li>
+      <img src={image} width="50px" height="50px" />
+      <p className="label">
+        {" "}
+        {label} <button onClick={saveIngredient}>Save to Fridge</button>
+      </p>
+    </li>
   );
 };
 
