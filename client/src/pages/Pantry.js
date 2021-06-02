@@ -77,6 +77,11 @@ const Pantry = () => {
       });
   };
 
+  const setLookie = (currIng) => {
+    currIng.looking = !currIng.looking;
+    console.log(currIng.looking);
+  }
+
   return (
 
     // <div className="flex">
@@ -135,6 +140,7 @@ const Pantry = () => {
                   label={ingredient.name}
                   image={ingredient.image}
                   looking={ingredient.looking}
+                  setLookie={() => setLookie(ingredient)}
                 />
               ))}
 
