@@ -30,6 +30,7 @@ module.exports = {
 
 async function loginCred(req,res){
   try {
+    console.log(req.body);
     const userData = await db.User.findOne({ where: { name: req.body.name } });
 
     if (!userData){
@@ -44,13 +45,13 @@ async function loginCred(req,res){
         return;
     }
 
-    req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.logged_in = true;
+    // req.session.save(() => {
+    //     req.session.user_id = userData.id;
+    //     req.session.logged_in = true;
         
-        res.json({ user: userData, message: 'You Are Now Logged In!'});
-    });
-
+    //     res.json({ user: userData, message: 'You Are Now Logged In!'});
+    // });
+    res.json(userData);
     console.log('Logged In');
 } catch (err) {
     res.status(400).json(err);
@@ -60,12 +61,13 @@ async function loginCred(req,res){
 async function createUser(req,res){
   try {
     const userData = await db.User.create(req.body);
-
-    req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.logged_in = true;
-        res.status(200).json(userData);
-    });
+    console.log(userData);
+    // req.session.save(() => {
+    //     req.session.user_id = userData.id;
+    //     req.session.logged_in = true;
+    //     res.status(200).json(userData);
+    // });
+    res.json(userData);
 } catch (err) {
     res.status(400).json(err);
 };
