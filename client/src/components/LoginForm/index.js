@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import API from '../../utils/API';
 import './style.css';
 
-const LoginForm = (props) => {
+const LoginForm = () => {
 
    const [loginData, setLoginState] = useState({name:"",password:""});
    const [loggedIn, setLoggedIn] = useState(false);
@@ -11,7 +11,7 @@ const LoginForm = (props) => {
       setLoginState({...loginData,[event.target.name]: event.target.value})
    }
 
-   const toggleLogin = () => setLoggedIn(value => !value);
+   const toggleLogin = () => setLoggedIn(!loggedIn);
 
    const checkCreds = (event) => {
       event.preventDefault();
@@ -20,7 +20,9 @@ const LoginForm = (props) => {
       .then((results)=>{
          console.log(results);
          toggleLogin();
-         console.log(loggedIn)
+         console.log(loggedIn);
+         localStorage.setItem("loggedIn",loggedIn);
+         localStorage.setItem("userId",results.data.id)
          window.location.replace("/");
       })
       .catch((err) => {
@@ -30,6 +32,8 @@ const LoginForm = (props) => {
    }
 
     return (
+       <div>
+       {!loggedIn ? 
     <div className="main">
     <div className="col-md-6 col-sm-12">
        <div id="formbox">
@@ -49,6 +53,9 @@ const LoginForm = (props) => {
        </div>
     </div>
  </div>
+       :
+       "Hello"}
+       </div>
     )
 }
 
