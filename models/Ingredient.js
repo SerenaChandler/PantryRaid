@@ -20,6 +20,11 @@ Ingredient.init(
       allowNull: true,
     },
 
+    looking: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+    }
+
     // user_id: {
     //   type: DataTypes.INTEGER,
     //   references: {
