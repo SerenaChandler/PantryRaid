@@ -1,22 +1,12 @@
 import React from "react";
 
-
-const PantryMyFridge = () => {
+const PantryMyFridge = (props) => {
+  const { label, image} = props;
   return (
-    <div className="col-lg-6">
-    <div className="container d-flex justify-content-center">
-        <div className="card" style={{width: "18rem"}}>
-            <div className="card-header text-center">
-                My Fridge
-            </div>
-            
-            {/* WORK IN PROGRESS, PUT MyFridgeItem HERE */}
-            
-
-            
-        </div>
+    <div className="list-group-item list-group-item-dark">
+      <img src={image} width="50px" height="50px" />
+      <p className="label"> {label}</p>
     </div>
-</div>
   );
 };
 

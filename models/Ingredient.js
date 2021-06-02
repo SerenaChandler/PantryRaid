@@ -20,20 +20,20 @@ Ingredient.init(
       allowNull: true,
     },
 
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "User",
-        key: "id",
-      },
-    },
-    recipe_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "Recipe",
-        key: "id",
-      },
-    },
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "User",
+    //     key: "id",
+    //   },
+    // },
+    // recipe_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "Recipe",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     sequelize,
