@@ -20,9 +20,9 @@ Ingredient.init(
       allowNull: true,
     },
 
-    search: {
+    looking: {
       type: DataTypes.BOOLEAN,
-      defaultValue: false
+      allowNull: true,
     }
 
     // user_id: {
