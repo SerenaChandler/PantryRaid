@@ -5,10 +5,13 @@ import './style.css';
 const RegisterForm = () => {
 
    const [userData, setUserData] = useState({ name: "", password: "" });
+   const [loggedIn, setLoggedIn] = useState(false);
 
    const handleChange = (event) => {
       setUserData({...userData,[event.target.name]: event.target.value});
    }
+
+   const toggleLogin = () => setLoggedIn(!loggedIn);
 
    const formSubmit = (event) => {
       event.preventDefault();
@@ -16,6 +19,9 @@ const RegisterForm = () => {
       API.saveUser(userData)
          .then((results) => {
             console.log(results);
+            toggleLogin();
+            localStorage.setItem("loggedIn",loggedIn);
+            localStorage.setItem("userId",results.data.id)
             window.location.replace("/");
          })
          .catch((err) => console.log(err));
