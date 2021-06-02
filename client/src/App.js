@@ -7,6 +7,7 @@ import Pantry from "./pages/Pantry"
 import notFound from "./pages/notFound"
 import Navbar from "./components/Navbar"
 import Login from './pages/Login/Login'
+import Footer from "./components/Footer"
 // import Searchbar from "./components/Searchbar"
 // import RecipeHeader from "./components/RecipeHeader"
 // import ChecklistDropdown from "./components/ChecklistDropdown"
@@ -23,8 +24,11 @@ function App() {
             <Route exact path="/pantry" component={Pantry}/>
             <Route exact path="/login" component={Login}/>
             <Route component={notFound}/>
+            
             </Switch>
+            {/* <Footer/> */}
             </div>
+
         </Router>
 
 
