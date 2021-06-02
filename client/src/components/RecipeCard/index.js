@@ -12,7 +12,7 @@ const RecipeCard = (props) => {
         <p className="text-center text-light">{description}</p>
         <ul className="list-group list-group-flush">
         {ingredients.map((ingredient) => <li className="text-light text-center list-group-item">{ingredient}</li>)}
-        <button onClick={saveFood} className="">Save Recipe</button>
+        <button onClick={saveFood} className="btn btn-primary">Save Recipe</button>
         </ul>
 
       </div>
