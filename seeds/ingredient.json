@@ -3,6 +3,11 @@
         "id":"1",
         "name":"Salt",
         "image":"https://www.edamam.com/food-img/a85/a85bb70cafe70e500090f722f261bb9a.jpg",
-        "looking":0
+        "looking":1
+    },
+    {
+        "name":"Paprika",
+        "image":"https://www.edamam.com/food-img/a85/a85bb70cafe70e500090f722f261bb9a.jpg",
+        "looking":1
     }
 ]
