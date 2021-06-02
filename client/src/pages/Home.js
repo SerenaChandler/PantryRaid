@@ -24,24 +24,44 @@ const Home = () => {
   };
 
   useEffect(() => {
-  
     API.getSavedIngredients()
       .then((results) => {
         setReturnedIngredients(results.data);
         console.log(results);
       })
       .catch((err) => console.log(err));
-},[])
+  }, []);
 
   const getRecipes = (search) => {
-    returnedIngredients.map((result) => (
-    API.getRecipesTest(result.name)
-      .then((results) => {
-        setReturnedRecipes(results.data.hits);
-        console.log(results);
-      })
-      .catch((err) => console.log(err))
-      ))};
+    returnedIngredients.map((result) =>
+      API.getRecipesTest(result.name)
+        .then((results) => {
+          setReturnedRecipes(results.data.hits);
+          console.log(results);
+        })
+        .catch((err) => console.log(err))
+    );
+  };
+
+  const shuffleRecipe = (results) => {
+    var currentIndex = results.length,
+      randomIndex;
+
+    
+    while (0 !== currentIndex) {
+     
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+    
+      [results[currentIndex], results[randomIndex]] = [
+        results[randomIndex],
+        results[currentIndex],
+      ];
+    }
+
+    return results;
+  };
 
   const saveFood = (recipeInfo) => {
     console.log(recipeInfo);
