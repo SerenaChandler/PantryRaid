@@ -33,14 +33,23 @@ const Home = () => {
   }, []);
 
   const getRecipes = (search) => {
+    const goodIng = [];
     returnedIngredients.map((result) =>
-      API.getRecipesTest(result.name)
+    {
+    if (result.looking === true){
+      goodIng.push(result.name);
+      console.log(goodIng);
+    }})
+    console.log(goodIng)
+      API.getRecipesTest(goodIng)
+      
         .then((results) => {
+          console.log(goodIng)
           setReturnedRecipes(results.data.hits);
           console.log(results);
         })
         .catch((err) => console.log(err))
-    );
+    
   };
 
   const shuffleRecipe = (results) => {

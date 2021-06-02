@@ -22,7 +22,7 @@ Ingredient.init(
 
     looking: {
       type: DataTypes.BOOLEAN,
-      allowNull: true,
+      defaultValue: true,
     }
 
     // user_id: {
