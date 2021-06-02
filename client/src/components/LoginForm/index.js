@@ -21,6 +21,7 @@ const LoginForm = (props) => {
          console.log(results);
          toggleLogin();
          console.log(loggedIn)
+         window.location.replace("/");
       })
       .catch((err) => {
          console.log(err);
