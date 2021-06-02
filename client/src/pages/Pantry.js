@@ -3,7 +3,7 @@ import PantryMyFridge from "../components/PantryMyFridge";
 import IngredientContainer from "../components/IngredientContainer";
 import API from "../utils/API";
 import IngredientCards from "../components/ingredientCards";
-// import "./style.css";
+import "./style.css";
 
 // import ChecklistDropdown from "./components/ChecklistDropdown"
 
@@ -78,6 +78,7 @@ const Pantry = () => {
 
   return (
     <div className="flex">
+
       <div className="searchbar">
         <IngredientContainer
           handleFormSubmit={handleFormSubmit}
@@ -85,6 +86,7 @@ const Pantry = () => {
           search={search}
         />
       </div>
+
       <div className="left">
         {savedIngredients.map((ingredient) => (
           <PantryMyFridge
@@ -95,6 +97,7 @@ const Pantry = () => {
           />
         ))}
       </div>
+
       <div className="right">
         {" "}
         <ul className="list-group">
@@ -107,6 +110,8 @@ const Pantry = () => {
           ))}
         </ul>
       </div>
+
+
     </div>
   );
 };
