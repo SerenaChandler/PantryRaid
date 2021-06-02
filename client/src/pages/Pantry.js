@@ -84,6 +84,11 @@ const Pantry = () => {
     API.updateIng(currIng.id,currIng.looking)
     .then((results) => {
       console.log(results);
+      API.getSavedIngredients()
+      .then((results) => {
+        setSavedIngredients(results.data);
+        console.log(results);
+      })
     })
     .catch((err) => console.log(err));
   }
