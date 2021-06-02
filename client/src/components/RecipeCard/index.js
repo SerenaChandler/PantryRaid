@@ -1,5 +1,6 @@
 import React from "react";
 import "./recipecard.css"
+import logo from "./logo.png"
 
 
 const RecipeCard = (props) => {
@@ -7,7 +8,7 @@ const RecipeCard = (props) => {
   return (
     <div className="recipecard">
       <div className="col-md-10 content">
-        <img src={image} height="400px" width="400px" alt={title}/>
+        <img src={image} height="400px" width="400px" alt={title} onerror={logo}/>
         <h1 className="text-center text-light"><a href={link} target="_blank" rel="noreferrer" className="text-decoration-none">{title}</a></h1>
         <p className="text-center text-light">{description}</p>
         <div className="buttoncontainer">
