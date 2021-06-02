@@ -4,7 +4,6 @@ module.exports = {
   findAll: function (req, res) {
     console.log("help")
     db.Ingredient.findAll(req.query)
-      .sort({ date: -1 })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
@@ -20,7 +19,7 @@ module.exports = {
   },
   remove: function (req, res) {
     db.Ingredient.findByPk( req.params.id )
-      .then((dbModel) => dbModel.remove())
+      .then((dbModel) => dbModel.destroy())
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
