@@ -46,7 +46,7 @@ const Pantry = () => {
     const savedIngredient = {
       name: ingredientInfo.label,
       image: ingredientInfo.image,
-  
+      looking: 0,
     };
     console.log("Saved ", savedIngredient);
     API.saveIngredient(savedIngredient).then((response) => {
@@ -76,6 +76,11 @@ const Pantry = () => {
         console.log("This is the error", err);
       });
   };
+
+  const setLookie = (currIng) => {
+    currIng.looking = !currIng.looking;
+    console.log(currIng.looking);
+  }
 
   return (
 
@@ -134,6 +139,8 @@ const Pantry = () => {
                   id={ingredient.id}
                   label={ingredient.name}
                   image={ingredient.image}
+                  looking={ingredient.looking}
+                  setLookie={() => setLookie(ingredient)}
                 />
               ))}
 
