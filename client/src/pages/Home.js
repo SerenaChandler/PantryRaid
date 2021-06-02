@@ -11,6 +11,7 @@ const Home = () => {
   // functions for handling search and checkboxes
   const [search, setSearch] = useState("");
   const [returnedRecipes, setReturnedRecipes] = useState([]);
+  const [returnedIngredients, setReturnedIngredients] = useState([]);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -22,26 +23,36 @@ const Home = () => {
     setSearch(value);
   };
 
+  useEffect(() => {
+  
+    API.getSavedIngredients()
+      .then((results) => {
+        setReturnedIngredients(results.data);
+        console.log(results);
+      })
+      .catch((err) => console.log(err));
+},[])
+
   const getRecipes = (search) => {
-    API.getRecipesTest(search)
+    returnedIngredients.map((result) => (
+    API.getRecipesTest(result.name)
       .then((results) => {
         setReturnedRecipes(results.data.hits);
         console.log(results);
       })
-      .catch((err) => console.log(err));
-  };
+      .catch((err) => console.log(err))
+      ))};
 
   const saveFood = (recipeInfo) => {
-    console.log(recipeInfo)
-    const savedRecipe = 
-      {
-        name: recipeInfo.label,
-        image: recipeInfo.image,
-        // description: recipeInfo.cuisineType[0],
-        link: recipeInfo.url,
-        // ingredients: recipeInfo.ingredientLines,
-      }
-    
+    console.log(recipeInfo);
+    const savedRecipe = {
+      name: recipeInfo.label,
+      image: recipeInfo.image,
+      // description: recipeInfo.cuisineType[0],
+      link: recipeInfo.url,
+      // ingredients: recipeInfo.ingredientLines,
+    };
+
     console.log("Saved ", savedRecipe);
     API.saveRecipe(savedRecipe).then((response) => {
       console.log(response);
