@@ -61,7 +61,7 @@ const Home = () => {
           {/* <ChecklistDropdown/> */}
           <RecipeHeader />
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 ">
               {returnedRecipes.map(({ recipe }) => (
                 <RecipeCard
                   id={recipe.id}

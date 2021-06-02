@@ -3,7 +3,7 @@ import PantryMyFridge from "../components/PantryMyFridge";
 import IngredientContainer from "../components/IngredientContainer";
 import API from "../utils/API";
 import IngredientCards from "../components/ingredientCards";
-import "./style.css";
+// import "./style.css";
 
 // import ChecklistDropdown from "./components/ChecklistDropdown"
 
@@ -61,7 +61,7 @@ const Pantry = () => {
 
   const deleteIngredient = (currentIngredient) => {
     console.log(currentIngredient);
-    API.deleteRecipe(currentIngredient.id)
+    API.deleteIngredient(currentIngredient.id)
       .then((res) => {
         console.log("you deleted this ingredient", res);
         API.getSavedIngredients()
