@@ -63,7 +63,7 @@ export default {
   },
 
   checkUser: function(loginData){
-    return axios.post("api/User", loginData)
+    return axios.post("api/User/login", loginData)
   },
 
   

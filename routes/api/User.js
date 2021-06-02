@@ -4,9 +4,12 @@ const userController = require("../../controllers/userController");
 
 router
   .route("/")
-  .get(userController.loginCred)
   .post(userController.save)
   //.post(userController.loginCred);
+
+  router
+  .route("/login")
+  .post(userController.loginCred)
 
   router
   .route("/:id")
