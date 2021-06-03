@@ -55,15 +55,12 @@ export default {
     return axios.get("/api/Ingredient");
   },
 
-<<<<<<< HEAD
-=======
   // getSavedIngredientsByUser: function () {
 
   //   return axios.get("/api/Ingredient" + user_id);
   // },
 
 
->>>>>>> 9f9d85c6a0555801fbb800ee2c673a2eb7a14996
   saveUser: function (savedUser) {
     return axios.post("/api/User", savedUser);
   },
