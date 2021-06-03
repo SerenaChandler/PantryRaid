@@ -5,7 +5,8 @@ import './style.css';
 const ChecklistDropdown = () => {
 
 
-    var expanded = false;
+    var isDietExpanded = false;
+    var isHealthExpanded = false;
 
     const checkStatus = () => {
         console.log("yay click me!!");
@@ -15,23 +16,23 @@ const ChecklistDropdown = () => {
 
     const showCheckboxes = () => {
         var checkboxes = document.getElementById("checkboxes");
-        if (!expanded) {
+        if (!isDietExpanded) {
             checkboxes.style.display = "block";
-            expanded = true;
+            isDietExpanded = true;
         } else {
             checkboxes.style.display = "none";
-            expanded = false;
+            isDietExpanded = false;
         }
     }
 
     const showCheckboxes2 = () => {
         var checkboxes2 = document.getElementById("checkboxes2");
-        if (!expanded) {
+        if (!isHealthExpanded) {
             checkboxes2.style.display = "block";
-            expanded = true;
+            isHealthExpanded = true;
         } else {
             checkboxes2.style.display = "none";
-            expanded = false;
+            isHealthExpanded = false;
         }
     }
 
@@ -71,7 +72,7 @@ const ChecklistDropdown = () => {
                         <option>Health Restrictions</option>
                     </select>
                     <div className="overSelect" onClick={() => {
-                    showCheckboxes();
+                    showCheckboxes2();
                     checkStatus();
                     
                     }}></div>
