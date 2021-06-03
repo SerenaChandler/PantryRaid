@@ -13,6 +13,7 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   save: function (req, res) {
+    // const userInfo 
     db.Ingredient.create(req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
@@ -30,3 +31,4 @@ module.exports = {
     .catch((err) => res.status(422).json(err));
   }
 };
+//function to get userID from front end to pass to the API function

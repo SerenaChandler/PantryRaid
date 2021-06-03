@@ -30,7 +30,7 @@ module.exports = {
 
 async function loginCred(req,res){
   try {
-    console.log(req.body);
+    console.log("loginCred", req.body);
     const userData = await db.User.findOne({ where: { name: req.body.name } });
 
     if (!userData){
@@ -51,8 +51,9 @@ async function loginCred(req,res){
         
     //     res.json({ user: userData, message: 'You Are Now Logged In!'});
     // });
-    res.json(userData);
     console.log('Logged In');
+    res.json({user: userData, loggedIn: true});
+    
 } catch (err) {
     res.status(400).json(err);
 };
