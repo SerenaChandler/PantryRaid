@@ -16,10 +16,23 @@ const Pantry = () => {
   const [savedIngredients, setSavedIngredients] = useState([]);
 
   useEffect(() => {
+    const matchieUser = localStorage.getItem("userId")
+    console.log(matchieUser)
+    const matchie = [];
     API.getSavedIngredients()
       .then((results) => {
-        setSavedIngredients(results.data);
-        console.log(results);
+        console.log(results)
+        //setSavedIngredients(results.data)
+        //console.log(results);
+        results.data.map((resi)=>{
+          console.log(resi)
+          if(resi.user_id == matchieUser){
+            matchie.push(resi);
+            console.log(matchie);
+            
+          }
+        })
+        setSavedIngredients(matchie);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -154,6 +167,7 @@ const Pantry = () => {
                   label={ingredient.name}
                   image={ingredient.image}
                   looking={ingredient.looking}
+                  user_id={ingredient.user_id}
                   setLookie={() => setLookie(ingredient)}
                 />
               ))}
