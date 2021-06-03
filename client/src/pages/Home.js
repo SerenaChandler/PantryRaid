@@ -6,7 +6,7 @@ import RecipeHeader from "../components/RecipeHeader";
 import RecipeCard from "../components/RecipeCard";
 import API from "../utils/API";
 import Navbar from "../components/Navbar"
-// import ChecklistDropdown from "./components/ChecklistDropdown"
+import ChecklistDropdown from "../components/ChecklistDropdown"
 
 const Home = () => {
   // functions for handling search and checkboxes
@@ -96,7 +96,7 @@ const searchRecipes = (search) => {
             getRecipes={getRecipes}
             search={search}
           />
-          {/* <ChecklistDropdown/> */}
+          <ChecklistDropdown/>
           <RecipeHeader />
           <div className="row">
             <div className="col-lg-12 ">

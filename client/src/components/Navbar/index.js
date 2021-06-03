@@ -6,12 +6,10 @@ const Navbar = () => {
 
     const [loggedIn, setLoggedIn] = useState();
 
-
     useEffect(() => {
         const loggedIn = localStorage.getItem("loggedIn");
         setLoggedIn(loggedIn);
       }, []);
-
 
     const logMeOut = () => {
         localStorage.removeItem("userId");
@@ -19,11 +17,8 @@ const Navbar = () => {
         window.location.reload();
     }
 
-
-
     return (
         <div class="topnav">
-
 
             <div class="topnav-centered">
                 <a href="/home"><img src={logo} alt="chef flag with skull and crossbones as a knife and spatula" width="100" /></a>
