@@ -1,0 +1,8 @@
+.footieee{ 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: teal;
+    color: red;
+}
