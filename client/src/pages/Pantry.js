@@ -4,7 +4,7 @@ import IngredientContainer from "../components/IngredientContainer";
 import API from "../utils/API";
 import IngredientCards from "../components/ingredientCards";
 import "./style.css";
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 
 // import ChecklistDropdown from "./components/ChecklistDropdown"
 
