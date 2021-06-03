@@ -7,8 +7,9 @@ const RegisterForm = () => {
    const [userData, setUserData] = useState({ name: "", password: "" });
 
    const handleChange = (event) => {
-      setUserData({...userData,[event.target.name]: event.target.value});
+      setUserData({...userData,[event.target.name]: event.target.value, });
    }
+   // userData: loggedIn
 
    const formSubmit = (event) => {
       event.preventDefault();
