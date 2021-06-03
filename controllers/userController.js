@@ -68,7 +68,7 @@ async function createUser(req,res){
     //     req.session.logged_in = true;
     //     res.status(200).json(userData);
     // });
-    res.json(userData);
+    res.json({user: userData, loggedIn: true});
 } catch (err) {
     res.status(400).json(err);
 };
