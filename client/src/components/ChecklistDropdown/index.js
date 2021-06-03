@@ -29,7 +29,7 @@ const ChecklistDropdown = () => {
     return (
         <div>
         <span className="multiselect">
-                    <div className="selectBox" onclick="showCheckboxes()">
+                    <div className="selectBox" onclick={showCheckboxes}>
                         <select>
                             <option>Diet Selection</option>
                         </select>
@@ -53,7 +53,7 @@ const ChecklistDropdown = () => {
 
 
                 <span className="multiselect">
-                    <div className="selectBox" onclick="showCheckboxes2()">
+                    <div className="selectBox" onclick={showCheckboxes2}>
                         <select>
                             <option>Health Restrictions</option>
                         </select>
