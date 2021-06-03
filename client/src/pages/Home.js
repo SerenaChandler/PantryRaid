@@ -11,11 +11,12 @@ const Home = () => {
   // functions for handling search and checkboxes
   const [search, setSearch] = useState("");
   const [returnedRecipes, setReturnedRecipes] = useState([]);
+  const [searchedRecipes, setSearchedRecipes] = useState([])
   const [returnedIngredients, setReturnedIngredients] = useState([]);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    getRecipes(search);
+    searchRecipes(search);
   };
 
   const handleInputChange = (event) => {
@@ -52,25 +53,14 @@ const Home = () => {
     
   };
 
-  const shuffleRecipe = (results) => {
-    var currentIndex = results.length,
-      randomIndex;
-
-    
-    while (0 !== currentIndex) {
-     
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-
-    
-      [results[currentIndex], results[randomIndex]] = [
-        results[randomIndex],
-        results[currentIndex],
-      ];
-    }
-
-    return results;
-  };
+const searchRecipes = (search) => {
+  API.getRecipesTest(search)
+    .then((results) => {
+      setSearchedRecipes(results.data.hits);
+      console.log(results);
+    })
+    .catch((err) => console.log(err))
+}
 
   const saveFood = (recipeInfo) => {
     console.log(recipeInfo);
@@ -96,6 +86,7 @@ const Home = () => {
           <Searchbar
             handleFormSubmit={handleFormSubmit}
             handleInputChange={handleInputChange}
+            getRecipes={getRecipes}
             search={search}
           />
           {/* <ChecklistDropdown/> */}
@@ -103,6 +94,19 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-12 ">
               {returnedRecipes.map(({ recipe }) => (
+                <RecipeCard
+                  id={recipe.id}
+                  key={recipe.id}
+                  saveFood={() => saveFood(recipe)}
+                  title={recipe.label}
+                  image={recipe.image}
+                  description={recipe.cuisineType}
+                  ingredients={recipe.ingredientLines}
+                  link={recipe.url}
+                  //  nutrition={recipe.recipe.nutrition}
+                />
+              ))}
+              {searchedRecipes.map(({ recipe }) => (
                 <RecipeCard
                   id={recipe.id}
                   key={recipe.id}
