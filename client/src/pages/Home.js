@@ -5,6 +5,7 @@ import Searchbar from "../components/Searchbar";
 import RecipeHeader from "../components/RecipeHeader";
 import RecipeCard from "../components/RecipeCard";
 import API from "../utils/API";
+import Navbar from "../components/Navbar"
 // import ChecklistDropdown from "./components/ChecklistDropdown"
 
 const Home = () => {
@@ -82,6 +83,7 @@ const searchRecipes = (search) => {
     <div className="container-fluid">
       <div className="row">
         <div className="col-lg-12 min-vh-100">
+        <Navbar />
           <Hero />
           <Searchbar
             handleFormSubmit={handleFormSubmit}

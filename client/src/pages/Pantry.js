@@ -4,6 +4,7 @@ import IngredientContainer from "../components/IngredientContainer";
 import API from "../utils/API";
 import IngredientCards from "../components/ingredientCards";
 import "./style.css";
+import Navbar from "../components/Navbar";
 
 // import ChecklistDropdown from "./components/ChecklistDropdown"
 
@@ -134,6 +135,7 @@ const Pantry = () => {
     <div className="container-fluid">
       <div className="row">
         <div className="col-lg-12 min-vh-100">
+        <Navbar />
           <div className="searchbar">
             <IngredientContainer
               handleFormSubmit={handleFormSubmit}
