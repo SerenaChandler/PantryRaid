@@ -16,6 +16,7 @@ const Navbar = () => {
     const logMeOut = () => {
         localStorage.removeItem("userId");
         localStorage.removeItem("loggedIn");
+        window.location.reload();
     }
 
 
