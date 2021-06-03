@@ -70,6 +70,7 @@ const searchRecipes = (search) => {
       image: recipeInfo.image,
       // description: recipeInfo.cuisineType[0],
       link: recipeInfo.url,
+      user_id: localStorage.getItem("userId")
       // ingredients: recipeInfo.ingredientLines,
     };
 
