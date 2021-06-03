@@ -17,7 +17,6 @@ const Pantry = () => {
 
   useEffect(() => {
     const matchieUser = localStorage.getItem("userId")
-    console.log(matchieUser)
     const matchie = [];
     API.getSavedIngredients()
       .then((results) => {
@@ -25,7 +24,6 @@ const Pantry = () => {
         //setSavedIngredients(results.data)
         //console.log(results);
         results.data.map((resi)=>{
-          console.log(resi)
           if(resi.user_id == matchieUser){
             matchie.push(resi);
             console.log(matchie);
@@ -66,10 +64,21 @@ const Pantry = () => {
     console.log("Saved ", savedIngredient);
     API.saveIngredient(savedIngredient).then((response) => {
       console.log(response);
+      const matchieUser = localStorage.getItem("userId")
+      const matchie = [];
       API.getSavedIngredients()
         .then((results) => {
-          setSavedIngredients(results.data);
-          console.log(results);
+          console.log(results)
+          //setSavedIngredients(results.data)
+          //console.log(results);
+          results.data.map((resi)=>{
+            if(resi.user_id == matchieUser){
+              matchie.push(resi);
+              console.log(matchie);
+              
+            }
+          })
+          setSavedIngredients(matchie);
         })
         .catch((err) => console.log(err));
     });
@@ -80,10 +89,21 @@ const Pantry = () => {
     API.deleteIngredient(currentIngredient.id)
       .then((res) => {
         console.log("you deleted this ingredient", res);
+        const matchieUser = localStorage.getItem("userId")
+        const matchie = [];
         API.getSavedIngredients()
           .then((results) => {
-            setSavedIngredients(results.data);
-            console.log(results);
+            console.log(results)
+            //setSavedIngredients(results.data)
+            //console.log(results);
+            results.data.map((resi)=>{
+              if(resi.user_id == matchieUser){
+                matchie.push(resi);
+                console.log(matchie);
+                
+              }
+            })
+            setSavedIngredients(matchie);
           })
           .catch((err) => console.log(err));
       })
@@ -99,10 +119,21 @@ const Pantry = () => {
     API.updateIng(currIng.id,currIng.looking)
     .then((results) => {
       console.log(results);
+      const matchieUser = localStorage.getItem("userId")
+      const matchie = [];
       API.getSavedIngredients()
-      .then((results) => {
-        setSavedIngredients(results.data);
-        console.log(results);
+        .then((results) => {
+          console.log(results)
+          //setSavedIngredients(results.data)
+          //console.log(results);
+          results.data.map((resi)=>{
+            if(resi.user_id == matchieUser){
+              matchie.push(resi);
+              console.log(matchie);
+              
+            }
+          })
+          setSavedIngredients(matchie);
       })
     })
     .catch((err) => console.log(err));

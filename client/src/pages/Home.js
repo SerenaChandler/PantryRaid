@@ -35,10 +35,11 @@ const Home = () => {
   }, []);
 
   const getRecipes = (search) => {
+    const user_id = localStorage.getItem("userId")
     const goodIng = [];
     returnedIngredients.map((result) =>
     {
-    if (result.looking === true){
+    if (result.looking === true && result.user_id == user_id){
       goodIng.push(result.name);
       console.log(goodIng);
     }})
