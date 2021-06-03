@@ -11,18 +11,24 @@ const LoginForm = () => {
       setLoginState({...loginData,[event.target.name]: event.target.value})
    }
 
-   const toggleLogin = () => setLoggedIn(!loggedIn);
+   const toggleLogin = () => {
+      
+   console.log("toggles"); 
+   setLoggedIn(!loggedIn);
+}
+
 
    const checkCreds = (event) => {
       event.preventDefault();
       console.log(loginData);
       API.checkUser(loginData)
       .then((results)=>{
+         console.log("before", loggedIn);
          console.log(results);
-         toggleLogin();
+         // toggleLogin();
          console.log(loggedIn);
-         localStorage.setItem("loggedIn",loggedIn);
-         localStorage.setItem("userId",results.data.id)
+         localStorage.setItem("loggedIn",results.data.loggedIn);
+         localStorage.setItem("userId",results.data.user.id)
          window.location.replace("/");
       })
       .catch((err) => {

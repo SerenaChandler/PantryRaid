@@ -57,6 +57,11 @@ export default {
     return axios.get("/api/Ingredient");
   },
 
+  // getSavedIngredientsByUser: function () {
+
+  //   return axios.get("/api/Ingredient" + user_id);
+  // },
+
 
   saveUser: function (savedUser) {
     return axios.post("/api/User", savedUser)

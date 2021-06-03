@@ -35,13 +35,9 @@ const Cookbook = () => {
 
     // functions for handling search and checkboxes
     return (
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-lg-12 min-vh-100">
-                    <div className="row">
-                        
-
-                            {savedRecipes.map((recipe) => (
+        
+        <div className="cardcontainer">
+               {savedRecipes.map((recipe) => (
                             <CookbookRecipes 
                             deleteFood={() => deleteFood(recipe)}
                             id={recipe.id}
@@ -52,15 +48,7 @@ const Cookbook = () => {
                            
                             />
                             ))}
-                            
-
-                        
-                    </div>
-                </div>
-            </div>
         </div>
-
-        
 
 
 

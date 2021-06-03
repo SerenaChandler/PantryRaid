@@ -8,8 +8,9 @@ const RegisterForm = () => {
    const [loggedIn, setLoggedIn] = useState(false);
 
    const handleChange = (event) => {
-      setUserData({...userData,[event.target.name]: event.target.value});
+      setUserData({...userData,[event.target.name]: event.target.value, });
    }
+   // userData: loggedIn
 
    const toggleLogin = () => setLoggedIn(!loggedIn);
 

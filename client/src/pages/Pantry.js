@@ -47,6 +47,7 @@ const Pantry = () => {
       name: ingredientInfo.label,
       image: ingredientInfo.image,
       looking: 0,
+      user_id: localStorage.getItem("userId")
     };
     console.log("Saved ", savedIngredient);
     API.saveIngredient(savedIngredient).then((response) => {
