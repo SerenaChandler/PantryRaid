@@ -12,9 +12,9 @@ const Searchbar = (props) => {
         style={{
           height: "150px",
           width: "300px",
-          border: "1px solid white",
+          border: "1px solid black",
           borderRadius: "60px",
-          backgroundColor: "green",
+          backgroundColor: "rgba(141, 3, 3, 0.897)",
           color: "white",
           fontSize: "25px",
         }}
