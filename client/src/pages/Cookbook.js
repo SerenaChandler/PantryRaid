@@ -8,11 +8,21 @@ const Cookbook = () => {
     const [savedRecipes, setSavedRecipes] = useState([])
 
     useEffect(() => {
+        const matchieUser = localStorage.getItem("userId")
+        const matchie = [];
         API.getSavedRecipes()
             .then((results) => {
-                setSavedRecipes(results.data);
-                console.log(results);
-            }).catch((err) => console.log(err))
+                //setSavedRecipes(results.data);
+                //console.log(results);
+                results.data.map((resi) => {
+                    if (resi.user_id == matchieUser) {
+                        matchie.push(resi);
+                        console.log(matchie);
+                    }
+                })
+                setSavedRecipes(matchie);
+            })
+            .catch((err) => console.log(err))
     }, [])
 
     const deleteFood = (currentRecipe) => {
@@ -20,11 +30,21 @@ const Cookbook = () => {
         API.deleteRecipe(currentRecipe.id)
             .then(res => {
                 console.log("you deleted this recipe", res)
+                const matchieUser = localStorage.getItem("userId")
+                const matchie = [];
                 API.getSavedRecipes()
                     .then((results) => {
-                        setSavedRecipes(results.data);
-                        console.log(results);
-                    }).catch((err) => console.log(err))
+                        //setSavedRecipes(results.data);
+                        //console.log(results);
+                        results.data.map((resi) => {
+                            if (resi.user_id == matchieUser) {
+                                matchie.push(resi);
+                                console.log(matchie);
+                            }
+                        })
+                        setSavedRecipes(matchie);
+                    })
+                    .catch((err) => console.log(err))
             })
             .catch(err => {
                 console.log("This is the error", err);
