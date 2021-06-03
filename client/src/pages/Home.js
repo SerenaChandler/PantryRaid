@@ -17,6 +17,7 @@ const Home = () => {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     searchRecipes(search);
+    setReturnedRecipes([])
   };
 
   const handleInputChange = (event) => {
@@ -34,6 +35,7 @@ const Home = () => {
   }, []);
 
   const getRecipes = (search) => {
+    
     const goodIng = [];
     returnedIngredients.map((result) =>
     {
@@ -46,6 +48,7 @@ const Home = () => {
       
         .then((results) => {
           console.log(goodIng)
+          setSearchedRecipes([])
           setReturnedRecipes(results.data.hits);
           console.log(results);
         })
@@ -54,6 +57,7 @@ const Home = () => {
   };
 
 const searchRecipes = (search) => {
+ 
   API.getRecipesTest(search)
     .then((results) => {
       setSearchedRecipes(results.data.hits);
@@ -93,6 +97,25 @@ const searchRecipes = (search) => {
           <RecipeHeader />
           <div className="row">
             <div className="col-lg-12 ">
+              {returnedRecipes.length === 0 ?
+              <div>
+               {searchedRecipes.map(({ recipe }) => (
+                <RecipeCard
+                  id={recipe.id}
+                  key={recipe.id}
+                  saveFood={() => saveFood(recipe)}
+                  title={recipe.label}
+                  image={recipe.image}
+                  description={recipe.cuisineType}
+                  ingredients={recipe.ingredientLines}
+                  link={recipe.url}
+                  //  nutrition={recipe.recipe.nutrition}
+                />
+              ))}
+               </div>
+               
+              :
+              <div>
               {returnedRecipes.map(({ recipe }) => (
                 <RecipeCard
                   id={recipe.id}
@@ -106,19 +129,11 @@ const searchRecipes = (search) => {
                   //  nutrition={recipe.recipe.nutrition}
                 />
               ))}
-              {searchedRecipes.map(({ recipe }) => (
-                <RecipeCard
-                  id={recipe.id}
-                  key={recipe.id}
-                  saveFood={() => saveFood(recipe)}
-                  title={recipe.label}
-                  image={recipe.image}
-                  description={recipe.cuisineType}
-                  ingredients={recipe.ingredientLines}
-                  link={recipe.url}
-                  //  nutrition={recipe.recipe.nutrition}
-                />
-              ))}
+              </div>
+            }
+           
+      
+           
             </div>
           </div>
         </div>
