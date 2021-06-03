@@ -8,10 +8,10 @@ const ChecklistDropdown = () => {
     var isDietExpanded = false;
     var isHealthExpanded = false;
 
-    const checkStatus = () => {
-        console.log("yay click me!!");
+    // const checkStatus = () => {
+    //     console.log("yay click me!!");
 
-    }
+    // }
 
 
     const showCheckboxes = () => {
@@ -45,9 +45,7 @@ const ChecklistDropdown = () => {
                         <option >Diet Selection</option>
                     </select>
                     <div className="overSelect" onClick={() => {
-                    showCheckboxes();
-                    checkStatus();
-                    }}></div>
+                    showCheckboxes()}}></div>
                 </div>
                 <div id="checkboxes">
                     <label for="balanced">
@@ -71,15 +69,12 @@ const ChecklistDropdown = () => {
                     <select>
                         <option>Health Restrictions</option>
                     </select>
-                    <div className="overSelect" onClick={() => {
-                    showCheckboxes2();
-                    checkStatus();
-                    
-                    }}></div>
-
+                    <div className="overSelect2" onClick={() => {
+                    showCheckboxes2()}}></div>
+                </div>
                     <div id="checkboxes2">
                         <label for="alcohol-free">
-                            <input type="checkbox" id="alcohol-free" />Alcohol-Free</label>
+                            <input type="checkbox" id="alcohol-free" enabled="true"/>Alcohol-Free</label>
                         <label for="celery-free">
                             <input type="checkbox" id="celery-free" />Celery-Free</label>
                         <label for="crustacean-free">
@@ -135,7 +130,7 @@ const ChecklistDropdown = () => {
                         <label for="wheat-free">
                             <input type="checkbox" id="wheat-free" />Wheat-Free</label>
                     </div>
-                </div>
+                
             </span>
         </div>
 

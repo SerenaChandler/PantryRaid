@@ -18,9 +18,9 @@ const Navbar = () => {
     }
 
     return (
-        <div class="topnav">
+        <div className="topnav">
 
-            <div class="topnav-centered">
+            <div className="topnav-centered">
                 <a href="/home"><img src={logo} alt="chef flag with skull and crossbones as a knife and spatula" width="100" /></a>
             </div>
 
@@ -30,7 +30,7 @@ const Navbar = () => {
             <div class="topnav-right">
 
               {loggedIn? 
-              <a href='javascript:;' onclick={logMeOut}><button onClick={logMeOut} className="btnnb btn-outline-primary mx-4">Logout</button></a>
+              <a href='javascript:;' onClick={logMeOut}><button onClick={logMeOut} className="btnnb btn-outline-primary mx-4">Logout</button></a>
               :
               <a href="/login" alt="pantry button" className="text-decoration-none"><button className="btnnc btn-outline-primary mx-4">Sign In</button></a>
             }
