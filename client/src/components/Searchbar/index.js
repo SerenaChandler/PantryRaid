@@ -1,11 +1,13 @@
 import React from "react";
+import "./style.css"
+import ChecklistDropdown from "../ChecklistDropdown"
 
 const Searchbar = (props) => {
   const { search, handleFormSubmit, handleInputChange, getRecipes } = props;
 
   return (
-    <div className="d-flex justify-content-center mt-4">
-      <button
+    <div className="">
+<div className="searchbutton"><button
         onClick={getRecipes}
         className="btn btn-outline-success my-2 my-sm-0"
         type="submit"
@@ -20,7 +22,7 @@ const Searchbar = (props) => {
         }}
       >
         Search My Pantry!
-      </button>
+      </button></div>
       <form className="form-inline my-2 my-lg-0" onSubmit={handleFormSubmit}>
         <input
           value={search}
@@ -31,6 +33,8 @@ const Searchbar = (props) => {
           placeholder="Search for a Recipe"
           aria-label="Search"
         />
+        <ChecklistDropdown/>
+        
         <div className="d-flex justify-content-end mt-4">
           <button
             className="btn btn-outline-success my-2 my-sm-0"
