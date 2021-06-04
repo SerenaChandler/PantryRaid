@@ -17,6 +17,11 @@ const IngredientContainer = (props) => {
             <button
               className="btn btn-outline-success my-2 my-sm-0"
               type="submit"
+              style={{
+                border:"1px solid black",
+                backgroundColor:"orange",
+                color:"white"
+              }}
             >
               Search
             </button>
