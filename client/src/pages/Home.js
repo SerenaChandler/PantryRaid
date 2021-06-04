@@ -7,7 +7,7 @@ import RecipeCard from "../components/RecipeCard";
 import API from "../utils/API";
 import Navbar from "../components/Navbar"
 import ChecklistDropdown from "../components/ChecklistDropdown"
-
+import logo from "../logo.png"
 const Home = () => {
   // functions for handling search and checkboxes
   const [search, setSearch] = useState("");
@@ -51,7 +51,9 @@ const Home = () => {
           console.log(goodIng)
           setSearchedRecipes([])
           setReturnedRecipes(results.data.hits);
+          //this is where I would need to do an includes with the values of the particular ingredient names from my pantry
           console.log(results);
+          console.log(returnedRecipes);
         })
         .catch((err) => console.log(err))
     
@@ -108,7 +110,7 @@ const searchRecipes = (search) => {
                   key={recipe.id}
                   saveFood={() => saveFood(recipe)}
                   title={recipe.label}
-                  image={recipe.image}
+                  image={recipe.image? recipe.image : logo}
                   description={recipe.cuisineType}
                   ingredients={recipe.ingredientLines}
                   link={recipe.url}
@@ -125,7 +127,7 @@ const searchRecipes = (search) => {
                   key={recipe.id}
                   saveFood={() => saveFood(recipe)}
                   title={recipe.label}
-                  image={recipe.image}
+                  image={recipe.image? recipe.image : logo}
                   description={recipe.cuisineType}
                   ingredients={recipe.ingredientLines}
                   link={recipe.url}

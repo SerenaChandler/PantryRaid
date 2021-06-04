@@ -1,6 +1,6 @@
 import React from "react";
 import "./recipecard.css"
-import logo from "./logo.png"
+import logo from "../../logo.png"
 
 
 const RecipeCard = (props) => {
@@ -8,7 +8,7 @@ const RecipeCard = (props) => {
   return (
     <div className="recipecard">
       <div className="col-md-10 content">
-        <img src={image} height="400px" width="400px" alt={title} onerror={logo}/>
+        <img src={image? image : logo} height="400px" width="400px" alt={title} />
         <h1 className="text-center"><a href={link} target="_blank" rel="noreferrer" className="text-decoration-none">{title}</a></h1>
         <p className="text-center">{description}</p>
         <div className="buttoncontainer">
@@ -16,7 +16,7 @@ const RecipeCard = (props) => {
         <a className="btn btn-success" href={link} target="_blank">View Recipe</a></div>
         <div className="columns">
         <ul>
-        {ingredients.map((ingredient) => <li>{ingredient}</li>)}</ul></div>
+        {ingredients.map((ingredient, index) => <li key={index}>{ingredient}</li>)}</ul></div>
         
 
         
