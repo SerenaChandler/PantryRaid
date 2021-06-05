@@ -42,7 +42,7 @@ const Home = () => {
     treeNutFree: false,
     vegan: false,
     vegetarian: false,
-    wheatFree: false,
+    wheatFree: false
   });
 
   const handleFormSubmit = (event) => {
