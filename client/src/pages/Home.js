@@ -13,6 +13,37 @@ const Home = () => {
   const [returnedRecipes, setReturnedRecipes] = useState([]);
   const [searchedRecipes, setSearchedRecipes] = useState([])
   const [returnedIngredients, setReturnedIngredients] = useState([]);
+  const [healthTag, setHealthTag] = useState({
+    alcoholFree: false,
+    celeryFree: false,
+    crustationFree: false,
+    dairyFree: false,
+    eggFree: false,
+    fishFree: false,
+    glutenFree: false,
+    keto: false,
+    kidneyFriendly: false,
+    kosher: false,
+    lowPotassium: false,
+    lupineFree: false,
+    mustardFree: false,
+    noOilAdded: false,
+    noSugar: false,
+    paleo: false,
+    peanutFree: false,
+    pescatarian: false,
+    porkFree: false,
+    redMeatFree: false,
+    sesameFree: false,
+    shellfishFree: false,
+    soyFree: false,
+    sugarConscious: false,
+    treeNutFree: false,
+    vegan: false,
+    vegetarian: false,
+    wheatFree: false
+
+  })
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -23,6 +54,11 @@ const Home = () => {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setSearch(value);
+  };
+
+  const handleHealthTag = (event) => {
+    const {name, value} = event.target;
+    setHealthTag({...healthTag, [name]: value})
   };
 
   useEffect(() => {
@@ -44,7 +80,7 @@ const Home = () => {
       console.log(goodIng);
     }})
     console.log(goodIng)
-      API.getRecipesTest(goodIng)
+      API.getRecipesTest(goodIng, healthTag)
       
         .then((results) => {
           console.log(goodIng)
@@ -60,7 +96,7 @@ const Home = () => {
 
 const searchRecipes = (search) => {
  
-  API.getRecipesTest(search)
+  API.getRecipesTest(search, healthTag)
     .then((results) => {
       setSearchedRecipes(results.data.hits);
       console.log(results);
@@ -97,6 +133,13 @@ const searchRecipes = (search) => {
             getRecipes={getRecipes}
             search={search}
           />
+
+          <ChecklistDropdown
+          handleHealthTag={handleHealthTag}
+          healthTag={healthTag}
+          
+          />
+
           <RecipeHeader />
           <div className="row">
             <div className="col-lg-12 ">
