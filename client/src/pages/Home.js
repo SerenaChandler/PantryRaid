@@ -16,7 +16,33 @@ const Home = () => {
   const [healthTag, setHealthTag] = useState({
     alcoholFree: false,
     celeryFree: false,
-    crustationFree: false
+    crustationFree: false,
+    dairyFree: false,
+    eggFree: false,
+    fishFree: false,
+    glutenFree: false,
+    keto: false,
+    kidneyFriendly: false,
+    kosher: false,
+    lowPotassium: false,
+    lupineFree: false,
+    mustardFree: false,
+    noOilAdded: false,
+    noSugar: false,
+    paleo: false,
+    peanutFree: false,
+    pescatarian: false,
+    porkFree: false,
+    redMeatFree: false,
+    sesameFree: false,
+    shellfishFree: false,
+    soyFree: false,
+    sugarConscious: false,
+    treeNutFree: false,
+    vegan: false,
+    vegetarian: false,
+    wheatFree: false
+
   })
 
   const handleFormSubmit = (event) => {
