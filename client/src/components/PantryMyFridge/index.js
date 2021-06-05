@@ -10,9 +10,9 @@ const PantryMyFridge = (props) => {
     <li className="list-group-item list-group-item-dark">
       <img src={image? image: logo} width="50px" height="50px" />
 
-      <p className="label"> {label}</p>
+      <p className="label">{label}</p>
       <button onClick={deleteIngredient}>Delete ingredient </button>
-      <button onClick={setLookie}>✅</button>
+      <button className="btno" onClick={setLookie}>✅</button>
       
 
     </li>
@@ -24,7 +24,7 @@ const PantryMyFridge = (props) => {
 
       <p className="label"> {label}</p>
       <button onClick={deleteIngredient}>Delete ingredient </button>
-      <button onClick={setLookie}>❌</button>
+      <button className="btno" onClick={setLookie}>❌</button>
       
 
     </li>
