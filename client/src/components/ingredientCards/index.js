@@ -10,7 +10,7 @@ const Ingredients = (props) => {
       <img src={image? image: logo} width="50px" height="50px" />
       <p className="label">
         {" "}
-        {label} <button onClick={saveIngredient}>Save to Fridge</button>
+        {label} <button onClick={saveIngredient}>Save to Pantry</button>
       </p>
     </li>
   );
