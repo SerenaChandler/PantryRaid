@@ -26,15 +26,21 @@ export default {
     }
   },
 
-  getRecipesTest: function (search) {
-    return axios.get(
-      `https://api.edamam.com/search?q=${search}&app_id=7cf0a1d3&app_key=536d6fab537d44cae44549e0fe9cf794`
-    );
+  getRecipesTest: function (search, health) {
+    if (health.length > 0) {
+      return axios.get(
+        `https://api.edamam.com/search?q=${search}&app_id=7cf0a1d3&app_key=536d6fab537d44cae44549e0fe9cf794&health=${health}`
+      );
+    } else {
+      return axios.get(
+        `https://api.edamam.com/search?q=${search}&app_id=7cf0a1d3&app_key=536d6fab537d44cae44549e0fe9cf794`
+      );
+    }
   },
 
   getIngredientsTest: function (search) {
     return axios.get(
-      `https://api.edamam.com/api/food-database/v2/parser?ingr=${search}&app_id=9aa9d53e&app_key=f2084d29ccda80e5c667c848bcdba419 `
+      `https://api.edamam.com/api/food-database/v2/parser?ingr=${search}&app_id=9aa9d53e&app_key=f2084d29ccda80e5c667c848bcdba419`
     );
   },
 
@@ -60,7 +66,6 @@ export default {
   //   return axios.get("/api/Ingredient" + user_id);
   // },
 
-
   saveUser: function (savedUser) {
     return axios.post("/api/User", savedUser);
   },
@@ -79,9 +84,8 @@ export default {
     return axios.delete("/api/Ingredient/" + id);
   },
 
-  updateIng: function(id,looking){
+  updateIng: function (id, looking) {
     console.log("updated!");
-    return axios.put("/api/Ingredient/" + id,{looking});
-  }
-
+    return axios.put("/api/Ingredient/" + id, { looking });
+  },
 };

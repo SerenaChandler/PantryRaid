@@ -2,9 +2,9 @@ import React from "react";
 import './style.css';
 
 
-const ChecklistDropdown = () => {
+const ChecklistDropdown = (props) => {
 
-
+const { handleHealthTag, healthTag } = props
     var isDietExpanded = false;
     var isHealthExpanded = false;
 
@@ -74,9 +74,9 @@ const ChecklistDropdown = () => {
                 </div>
                     <div id="checkboxes2">
                         <label for="alcohol-free">
-                            <input type="checkbox" id="alcohol-free" enabled="true"/>Alcohol-Free</label>
+                            <input type="checkbox" onChange={handleHealthTag} value={healthTag.alcoholFree} name="alcoholFree" id="alcohol-free" enabled="true"/>Alcohol-Free</label>
                         <label for="celery-free">
-                            <input type="checkbox" id="celery-free" />Celery-Free</label>
+                            <input type="checkbox" onChange={handleHealthTag} value={healthTag.celeryFree} name="celeryFree" id="celery-free" />Celery-Free</label>
                         <label for="crustacean-free">
                             <input type="checkbox" id="crustacean-free" />Crustacean-Free</label>
                         <label for="dairy-free">
