@@ -15,11 +15,11 @@ const Home = () => {
   const [searchedRecipes, setSearchedRecipes] = useState([]);
   const [returnedIngredients, setReturnedIngredients] = useState([]);
   const [healthTag, setHealthTag] = useState({
-    alcoholFree: false,
+    alcoholFree:false,
     celeryFree: false,
     crustationFree: false,
     dairyFree: false,
-    eggFree: false,
+    eggFree: true,
     fishFree: false,
     glutenFree: false,
     keto: false,
@@ -72,13 +72,22 @@ const Home = () => {
 
   const getRecipes = (search) => {
     const healthLabels = [];
-    healthTag.map((results) => {
-      if (results === true) {
-        healthLabels.push(results);
-      }
-    });
     const user_id = localStorage.getItem("userId");
     const goodIng = [];
+    //  for(let i=0;i<29;i++){
+    //   if (healthTag[i] === true) {
+    //         healthLabels.push(healthTag[i]);
+    //         console.log(healthLabels)
+    //       }
+    //       console.log(healthLabels)
+    // }
+    for(const key in healthTag){
+      if (key === true) {
+                healthLabels.push(key);
+                console.log(healthLabels)
+              }
+              console.log(healthLabels)
+    }
     returnedIngredients.map((result) => {
       if (result.looking === true && result.user_id == user_id) {
         goodIng.push(result.name);
