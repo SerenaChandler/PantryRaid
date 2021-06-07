@@ -134,11 +134,7 @@ const searchRecipes = (search) => {
             search={search}
           />
 
-          <ChecklistDropdown
-          handleHealthTag={handleHealthTag}
-          healthTag={healthTag}
           
-          />
 
           <RecipeHeader />
           <div className="row">
