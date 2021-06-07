@@ -33,12 +33,17 @@ const Searchbar = (props) => {
           placeholder="Search for a Recipe"
           aria-label="Search"
         />
-      
+
         
         <div className="d-flex justify-content-end mt-4">
           <button
             className="btn btn-outline-success my-2 my-sm-0"
             type="submit"
+            style={{
+              border:"1px solid black",
+              backgroundColor:"orange",
+              color:"white"
+            }}
           >
             Search
           </button>

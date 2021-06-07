@@ -4,7 +4,7 @@ import './style.css';
 
 const ChecklistDropdown = (props) => {
 
-const { handleHealthTag, healthTag } = props
+const { handleHealthTag, ...healthTag } = props
     var isDietExpanded = false;
     var isHealthExpanded = false;
 
@@ -94,7 +94,7 @@ const { handleHealthTag, healthTag } = props
                         <label for="kosher">
                             <input type="checkbox" onChange={handleHealthTag} value={healthTag.kosher} name="kosher" id="kosher"/>Kosher</label>
                         <label for="low-potassium">
-                            <input type="checkbox" onChange={handleHealthTag} value={healthTag.celeryFree} name="celeryFree" id="low-potassium" />Low-Potassium</label>
+                            <input type="checkbox" onChange={handleHealthTag} value={healthTag.lowPotassium} name="lowPotassium" id="low-potassium" />Low-Potassium</label>
                         <label for="lupine-free">
                             <input type="checkbox" onChange={handleHealthTag} value={healthTag.celeryFree} name="celeryFree" id="lupine-free" />Lupine-Free</label>
                         <label for="mustard-free">
