@@ -72,7 +72,7 @@ const { handleHealthTag, ...healthTag } = props
                     <div className="overSelect2" onClick={() => {
                     showCheckboxes2()}}></div>
                 </div>
-                    <div id="checkboxes2">
+                    {/* <div id="checkboxes2">
                         <label for="alcohol-free">
                             <input type="checkbox" onChange={handleHealthTag} value={healthTag.alcoholFree} name="alcoholFree" id="alcohol-free" enabled="true"/>Alcohol-Free</label>
                         <label for="celery-free">
@@ -129,7 +129,7 @@ const { handleHealthTag, ...healthTag } = props
                             <input type="checkbox" onChange={handleHealthTag} value={healthTag.celeryFree} name="celeryFree" id="vegetarian" />Vegetarian</label>
                         <label for="wheat-free">
                             <input type="checkbox" onChange={handleHealthTag} value={healthTag.celeryFree} name="celeryFree" id="wheat-free" />Wheat-Free</label>
-                    </div>
+                    </div> */}
                 
             </span>
         </div>

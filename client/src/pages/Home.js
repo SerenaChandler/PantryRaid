@@ -15,35 +15,38 @@ const Home = () => {
   const [searchedRecipes, setSearchedRecipes] = useState([]);
   const [returnedIngredients, setReturnedIngredients] = useState([]);
   const [healthTag, setHealthTag] = useState({
-    alcoholFree:false,
-    celeryFree: false,
-    crustationFree: false,
-    dairyFree: false,
-    eggFree: true,
-    fishFree: false,
-    glutenFree: false,
-    keto: false,
-    kidneyFriendly: false,
-    kosher: false,
-    lowPotassium: false,
-    lupineFree: false,
-    mustardFree: false,
-    noOilAdded: false,
-    noSugar: false,
-    paleo: false,
-    peanutFree: false,
-    pescatarian: false,
-    porkFree: false,
-    redMeatFree: false,
-    sesameFree: false,
-    shellfishFree: false,
-    soyFree: false,
-    sugarConscious: false,
-    treeNutFree: false,
-    vegan: false,
-    vegetarian: false,
-    wheatFree: false
-  });
+
+    // alcoholFree: false,
+    // celeryFree: false,
+    // crustationFree: false,
+    // dairyFree: false,
+    // eggFree: false,
+    // fishFree: false,
+    // glutenFree: false,
+    // keto: false,
+    // kidneyFriendly: false,
+    // kosher: false,
+    // lowPotassium: false,
+    // lupineFree: false,
+    // mustardFree: false,
+    // noOilAdded: false,
+    // noSugar: false,
+    // paleo: false,
+    // peanutFree: false,
+    // pescatarian: false,
+    // porkFree: false,
+    // redMeatFree: false,
+    // sesameFree: false,
+    // shellfishFree: false,
+    // soyFree: false,
+    // sugarConscious: false,
+    // treeNutFree: false,
+    // vegan: false,
+    // vegetarian: false,
+    // wheatFree: false
+
+  })
+
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -154,10 +157,6 @@ console.log(healthLabels)
             search={search}
           />
 
-          <ChecklistDropdown
-            handleHealthTag={handleHealthTag}
-            healthTag={healthTag}
-          />
 
           <RecipeHeader />
           <div className="row">

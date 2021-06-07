@@ -33,6 +33,7 @@ const Searchbar = (props) => {
           placeholder="Search for a Recipe"
           aria-label="Search"
         />
+
         
         <div className="d-flex justify-content-end mt-4">
           <button
